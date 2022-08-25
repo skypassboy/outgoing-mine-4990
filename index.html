@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
     <style>
         
         #dupenavbar{
@@ -136,7 +138,7 @@
         #bottomcontainerrightside{
             /* width: 500px; */
             display: grid;
-            grid-template-rows:15% 5%;
+            grid-template-rows:5% 5%;
             gap: 20px;
            
         }
@@ -165,7 +167,7 @@
         #save>div{
             border: 1px solid blue;
             background-color: rgb(76, 134, 134);
-            border-radius: 15px ;
+            border-radius: 5px ;
             font-weight: bold;
             /* margin: auto; */
         } 
@@ -192,7 +194,7 @@
             border: 1px solid blue;
             /* margin: auto; */
             background-color: rgb(76, 134, 134);
-            border-radius: 15px ;
+            border-radius: 5px ;
             font-weight: bold;
         } 
          #savetop1{
@@ -218,7 +220,7 @@
             border: 1px solid blue;
             /* margin: auto; */
             background-color: rgb(76, 134, 134);
-            border-radius: 15px ;
+            border-radius: 5px ;
             font-weight: bold;
         } 
          #savetop2{
@@ -244,7 +246,7 @@
             border: 1px solid blue;
             /* margin: auto; */
             background-color: rgb(76, 134, 134);
-            border-radius: 15px ;
+            border-radius: 5px ;
             font-weight: bold;
         } 
          #savetop3{
@@ -268,9 +270,27 @@
             height: auto;
             border: 1px solid red;
         }
-        /* #costprice{
+        #costprice{
             margin-bottom: 300px;
-        } */
+        }
+        #costprice{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        #costprice>div{
+            border: 1px solid red;
+        }
+        .liclass{
+            list-style: none;
+
+        }
+        .saveall{
+            border-radius: 1%;
+        }
+        .btn{
+            margin: 30% 30% 10% 40%;
+        }
+    
        
         
 
@@ -316,6 +336,19 @@
 
         </div>
         <div id="rightsidebar2">
+            <video
+            id="backgroundvideo1"
+            controls
+            height="385px"
+            width="100%"
+            loop
+            autoplay
+            muted
+          >
+            <source src="video1.mp4"
+            type="video/mp4" />
+          </video>
+
 
         </div>
 
@@ -329,62 +362,72 @@
         <div id="bottomcontainerleftside"></div>
         <div id="bottomcontainerrightside">
             <div id="bottomcontainerrightsidemain">
-                <div id="save">
-                    <div style="background-color: white; border: 1px solid white;">
+                <div id="save" class="saveall">
+                    <div style="background-color: white; border: 1px solid white; margin: auto;">
+                        <i class="fa-solid fa-tag"></i>
                         
                     </div>
                     <div id="savetop">
                         <div>
-                            <li>Save 15% on every order</li>
+                            <li class="liclass">Save 15% on every order</li>
                         </div>
                         <div>
-                            <li>Get Plus now</li>
+                            <li class="liclass">Get Plus now</li>
                         </div>
                        
 
                     </div>
                    
                 </div>
-                <div id="save1" >
+                <div id="save1" class="saveall" >
 
-                    <div style="background-color: white; border: 1px solid white;" ></div>
+                    <div style="background-color: white; border: 1px solid white; margin: auto" >
+                        <i class="fa-solid fa-tag"></i></div>
                     <div id="savetop1">
                         <div>
-                            <li>5% Simpl cashback up to 750</li>
+                            <li class="liclass">5% Simpl cashback up to 750</li>
                         </div>
                         <div>
-                            <li>Get up to 750 Cashback</li>
+                            <li class="liclass">Get up to 750 Cashback</li>
                         </div>
 
                     </div>
                 </div>
-                <div id="save2">
-                    <div style="background-color: white; border: 1px solid white;"></div>
+                <div id="save2"  class="saveall">
+                    <div style="background-color: white; border: 1px solid white; margin: auto">
+                        <i class="fa-solid fa-tag"></i></div>
                     <div id="savetop2">
                         <div>
-                            <li>Assured cashback</li>
+                            <li class="liclass">Assured cashback</li>
                         </div>
                         <div>
-                            <li>Upto 500 off</li>
+                            <li class="liclass">Upto 500 off</li>
                         </div>
 
                     </div>
                 </div>
-                <div id="save3">
-                    <div style="background-color: white; border: 1px solid white;"></div>
+                <div id="save3"  class="saveall">
+                    <div style="background-color: white; border: 1px solid white; margin: auto">
+                        <i class="fa-solid fa-tag"></i>
+                    </div>
                     <div id="savetop3">
                         <div>
-                            <li>Get upto 500 cashback</li>
+                            <li class="liclass">Get upto 500 cashback</li>
                         </div>
                         <div>
-                            <li>Valid on Mobikwik Wallet</li>
+                            <li class="liclass">Valid on Mobikwik Wallet</li>
                         </div>
 
                     </div>
                 </div>
 
             </div>
-            <div id="costprice"></div>
+            <div id="costprice">
+                <div>
+                    <h1 id="cost"></h1>
+                </div>
+                <div id="viewcart"></div>
+            </div>
            
 
         </div>
@@ -445,8 +488,9 @@
 
     }
     append(mainarr)
-    let Packages=[
-        {
+    
+    let main=[
+    {
             name:"Haircut + Shave + Free 10 min head massage",
             rating:"4.83(256k)",
             price:399,
@@ -513,9 +557,204 @@
             b:"Full body massage"
 
 
-        }
-    ]
+        },
+    										
 
+			{ name:"Haircut for Men",	
+            rating:"4.87 (456.8K)",	
+            price:249,
+            special:"30 mins View details",
+            a:"",
+            b:""
+        },
+        {
+            name:"Haircut for 2",
+            rating:	"4.85 (18.1K)",
+            price:499,
+            special:"60 mins",
+            a:"Pack of 2 Haircut for Men",
+            b:""
+           
+        },
+        { 
+            	
+         name:"FOR 3-12 YEARS BOYS	Kid's Hair Cut",
+         rating:"4.82 (83.5K)",
+         price:	249,
+        special:"30 mins View details",
+        a:"No more hassle of managing kids outside",b: "safe haircut at home and Expert child stylists for a mess free experience with child friendly equipment",
+        },
+        { 
+
+      name:"Haircut + Beard Grooming + Massage",	
+      rating:"4.84 (212.9K)",
+      price:549	,
+      special:"1 hr 5 mins",		
+      a:"Men's Haircut	10 min Head Massage	Add",
+      b:""
+        },
+        {
+
+      name:"Father & Kid's Haircut",	
+      rating:"4.83 (212K)",
+      price:599,
+    special:"1 hr 10 mins",
+    a:"10 min Head Massage",
+    b:"Kids Haircut (Boys)",
+        },
+        { 
+	name:"Hair Color with Product",
+    rating:"4.82(1.6K)" ,
+    price:299,
+    special:"20min",
+    a:"Ammonia-free products for best results",
+    b:"Top brands available - Garnier & L'Oreal",	
+        },
+        { 
+
+ name:"COLOR PROVIDED BY USER	Hair Color - Application Only",
+ 	rating:"4.80(18.6K)",
+    price:199,
+    special:"40 mins",		
+    a:"Even application by professionals especially at the back	Complete coverage of grey hair from tip to root",
+    b:""
+        },
+        {	
+
+name:"Clean Shave/Moustache Grooming",	
+rating:"4.83(56K)",
+price:149,
+special:"20 mins",
+a:"",
+b:"",
+        },
+    { 
+
+name:"Beard Shaping & Styling",
+rating:"4.84(86.1K)",
+price:199,
+special:"25 mins",
+a:"Get an even beard shape", 
+b:"covering all hard to reach areas	Get customized styles from our professionally trained stylists",	
+    },
+    { 
+name:"Beard Color with Product", 
+rating:"4.70(964)",	
+price:199,
+special:"30 mins",
+a:"Colour patchy grey beards with a truly natural look",
+b:"Best quality products to ensure a natural looking color",
+    },
+    { 
+										
+name:"Face & Neck De-Tan",
+rating:"4.79(22.2K)",
+price:399,
+special:"20min",
+a:"",
+b:"",
+	},
+
+{ 
+name:"Instant Tan Reduction",
+rating:"4.77(5.8K)",
+price:149,
+special:"10 mins",
+a:"Removes tan", 
+b:"dust & dirt	Treats pigmentation marks on your face",
+},
+{ 
+
+name:"NEW LAUNCH	Instant Oil Reduction",
+rating:"4.73(2K)",
+price:149,
+special:"10 mins",
+a:"Removes excess oil deposits from skin & pores",
+b:"Promotes refreshed & hydrated skin, prevents acne",
+	},	
+    { 
+
+name:"Refreshing Face Massage",
+rating:"4.78(3.9K)",
+price:149,
+special:"10 mins",
+a:"Improves blood circulation & reduces wrinkles",
+b:"Moisturizes dry skin, instant freshness",
+    },
+    { 	
+name:"FOR DRY SKIN	Anti-pollution Cleanup",	
+rating:"4.77(6K)",
+price:699,
+special:"35 mins",
+a:"Activated charcoal absorb impurities, prevent skin damage",
+b:"Cleanses excess oil for an energized skin",
+    },
+    { 
+name:"Oil Reduction Cleanup",
+rating:"4.77(5.1K)" ,
+price:699,
+special:"35 mins",
+a:"Hydrating antibacterial formula that cleanses dark spots	Powered by antioxidants and vitamins",
+b:""
+    },
+    { 
+name:"Skin Brightening Facial",
+rating:"4.77(9.3K)",
+price:1399,
+special:"1 hr 5 mins",	
+a:"Brightens skin & evens out skin tone also protects from sun exposure	Includes a deep face stress relief massage",
+b:"",
+    },
+    { 
+name:"Mulberry & Saffron Facial",
+rating:"4.78(4.2K)",
+price:1399,
+special:"1 hr 5 mins",
+a:"Transforms  and restores dull and dead skin",
+b:"Natural extracts give a boost of hydration",
+    	},
+        { 
+									
+name:"Relaxing Head Massage",
+rating:"4.83(95.8K)",
+price:99,
+special:"10min",
+a:"",
+b:"",
+        },
+        { 
+name:"WFH SPECIAL	Neck & Shoulder Massage",
+rating:	"4.78(7.5K)",
+price:199,
+special:"20 mins",
+a:"Relaxing Neck",
+b:"Shoulder Massage	Eases tense and sore muscles"
+        },
+        {
+name:"HAIRWASH NOT INCLUDED	Anti Dandruff - Head Massage",
+rating:"4.81(2.5K)",
+price:149,
+a:"Reduces dandruff, itchy and flaky scalp	Onion, curry leaf" ,
+b:" neem oil that heal & prevent hair damage",
+        },
+{
+
+name:"Kid's Head Massage" ,
+rating:"4.87(283)",
+price:149,
+special:"40 mins",
+a:"Relaxing",
+b:"child friendly massage	Helps increase focus & concentration"
+},
+{ 
+name:"Head, Neck & Shoulder Massage",
+rating:"4.77(6.1K)",
+price:349,
+special:"40 mins",
+a:"Complete relaxation from exhaustion & work fatigue",
+b:"Relieves knots, stiffness & muscle tension"
+}										
+    ]
     let package=(data)=>{
         let bottomcontainerleftside=document.getElementById("bottomcontainerleftside")
         bottomcontainerleftside.innerHTML=null
@@ -524,14 +763,18 @@
             a.innerText=el.name
             let b=document.createElement("h4")
             b.innerText=el.rating
+            b.style="color:gray"
             let c=document.createElement("h4")
-            c.innerText=el.price
+            c.innerText=` ₹ ${el.price}`
             let d=document.createElement("h4")
             d.innerText=el.special
+            d.style="color:gray"
             let e=document.createElement("h4")
             e.innerText=el.a
+            e.style="color:gray"
             let f=document.createElement("h4")
             f.innerText=el.b
+            f.style="color:gray"
             let div=document.createElement("div")
             div.setAttribute("class","haircut")
             let div2=document.createElement("div")
@@ -540,7 +783,7 @@
             btn.innerText="ADD"
             btn.setAttribute("class","btn")
             btn.addEventListener("click",function(){
-                add(btn)
+                add(el)
             })
             div.append(a,b,c,d,e,f)
             div2.append(btn)
@@ -551,12 +794,24 @@
         })
         
     }
-    let count=0
-    function add(btnn){
+    totalprice=0
+    let add=(el)=>{
+
+        alert(`added to the cart of ${el.name}`)
+        totalprice+=el.price
+        let cost=document.getElementById("cost")
+        cost.innerText= ` ₹ ${totalprice}`
+        let viewcart=document.getElementById("viewcart")
+        viewcart.innerHTML=null
+        let btnn=document.createElement("button")
+        btnn.innerText="View Cart"
+        viewcart.append(btnn)
         
-        count++
-        btnn.innerText=`${count}`
+
+
+         
     }
-    package(Packages)
+   
+    package(main)
 
 </script>
