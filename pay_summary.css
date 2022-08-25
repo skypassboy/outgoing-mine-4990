@@ -1,0 +1,76 @@
+#main_container{
+    margin: auto;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    width: 80%;
+    gap:20px;
+}
+/* ========================subchild1=================== */
+#main_sub1{
+    padding-right: 20px;
+} 
+
+
+/*================= payment_details  subchild1 ============*/
+.payment_details>div{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.rotating_coin, .remove_membership{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+    
+.rotating_coin>div{
+    position: relative;
+    padding-left: 10px;
+}
+.rotating_coin>div>img{
+    
+    width: 50%;
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.rotating_coin>div>img+img{
+    position: absolute;
+    left: 16px;
+    bottom: 0px; 
+    width: 40%;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* undermain sub_div1 child2 div re_add_remove */
+.re_add_remove{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.re_add_remove>#incre_decre_count{
+    display: flex;
+    padding: 0px 0px;
+    border: 0.1px solid #ad99e6;
+    border-radius: 9px;
+    background-color: #ebeef1;
+   /* font-family: 'PT Sans', sans-serif;
+   font-family: 'Roboto', sans-serif; */
+}
+
+.re_add_remove>#incre_decre_count>p{
+  margin: 5px;
+  padding: 0px 4px;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #9c82e4;
+}
+ 
+#remove_membership>#remove_12months{
+    
+}
+   
