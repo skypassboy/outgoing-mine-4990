@@ -1,3 +1,9 @@
+body{
+    font-family: 'Roboto', sans-serif;  
+}
+    
+/*  font-family: 'PT Sans', sans-serif;
+  font-family: 'Roboto', sans-serif; */
 #main_container{
     margin: auto;
     box-sizing: border-box;
@@ -7,24 +13,22 @@
     width: 80%;
     gap:20px;
 }
+
 /* ========================subchild1=================== */
 #main_sub1{
     padding-right: 20px;
-} 
-
-
-/*================= payment_details  subchild1 ============*/
-.payment_details>div{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-}
-.rotating_coin, .remove_membership{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
     
+} 
+#main_sub1>.back-blue{
+    background-color: #eff3f5;
+    opacity: 0.7;
+    padding-bottom: 10px;
+}
+
+
+
+
+ /* daf==============================    */
 .rotating_coin>div{
     position: relative;
     padding-left: 10px;
@@ -47,6 +51,16 @@
 }
 
 /* undermain sub_div1 child2 div re_add_remove */
+.rotating_coin, .remove_membership{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+  }   
+.re_add_remove, .remove_membership{
+    background-color: white;
+}
+
 .re_add_remove{
   display: flex;
   justify-content: space-between;
@@ -70,7 +84,98 @@
   color: #9c82e4;
 }
  
-#remove_membership>#remove_12months{
+.remove_membership>#remove_12months{
+   padding: 9px 16px;
+   border: 0.1px solid #ad99e6;
+   border-radius: 9px;
+   background-color: #ebeef1;
+   font-family: 'Roboto', sans-serif;
+   font-size: 15px;
+   font-weight: 600;
+   color: #9679e6;
+   letter-spacing: 0.18px;
+   margin-left: auto;
+   margin-right: 7%;
+}
+/*================= payment_details  main>subchild2 ============*/
+#main_sub2{
+    padding: 20px;
+}
+.bottom-line{
+    background-color: #eff3f5;
+    opacity: 0.7;
+    width: 100%;
+    height: 9px;
+    margin-top: 30px;
+}
+
+#main_sub2>.payment_details>.bottom-line{
+    background-color: #eff3f5;
+    opacity: 0.7;
+    width: 100%;
+    height: 9px;
+    margin-top: 30px;
+}
+.payment_details>div:nth-child(3){
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:2px ;
+}    
+.payment_details>div>div{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom:2px ;
+}
+
+.payment_details>div>div{
+    margin-bottom: 10px;
+    padding: 0px;
+}
+  
+
+.payment_details>div>div>p{
+    margin: 4px;
+}
+.payment_details>.final_discount{
+   
+    padding: 5px;
+    color: rgb(9, 95, 60);
+    background-color: rgb(235, 243, 243);
+    display: flex;
+    justify-content: center;
+}
+.final_discount>p{
+    text-align: center;
+}    
+.coupne_offer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:20px;
+}
+.coupne_offer>div:first-child{
+    width: 12px;
+    height: 12px;
+    background-color: rgb(9, 95, 60);
+    border-radius: 50px;
+    padding: 6px 6px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    transform: rotate(20deg);
     
 }
-   
+    
+.coupne_offer>div:last-child>p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.30px;
+  font-size: 18px;
+  margin: 3px;
+
+}
+.coupne_offer>div:last-child>p:last-of-type{
+   color: #999fa0;
+}
