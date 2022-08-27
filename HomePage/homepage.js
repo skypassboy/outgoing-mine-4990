@@ -73,3 +73,12 @@ function HPBF3next()
 {
     document.getElementById('HP-banner-foot-3-slider-container').scrollLeft += 270;
 }
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("HP-banner-Navbar-1")=x
+    document.getElementById("logo").style.fontSize = "25px";
+  }
+}
