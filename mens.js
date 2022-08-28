@@ -410,10 +410,12 @@ c:"Hair cut for mens"
         package(result)
     }
     totalprice=0
+    let arr = JSON.parse(localStorage.getItem("urbanCompany")) || []
     let add=(el)=>{
-        let arr = JSON.parse(localStorage.getItem("urbanComapny")) || []
+        
         arr.push(el)
-        localStorage.setItem("urbanComapny", JSON.stringify(arr))
+        console.log(arr)
+        localStorage.setItem("urbanCompany", JSON.stringify(arr))
         alert(`added to the cart of ${el.name}`)
         totalprice+=el.price
         let thcost=document.getElementById("thcost")
@@ -423,11 +425,17 @@ c:"Hair cut for mens"
         let btnn=document.createElement("button")
         btnn.innerText="View Cart"
         btnn.setAttribute("class","thviewcartbtnn")
+       
         thviewcart.append(btnn)
         
-
+        btnn.addEventListener('click', ()=>{
+            window.location.href = "estimatebill&membership.html"
+        })
 
          
     }
    
     package(main)
+    let th_localstorage = document.getElementById('th_localstorage')
+    let th_l = JSON.parse(localStorage.getItem("location"))
+    th_localstorage.innerText = th_l

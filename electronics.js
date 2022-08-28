@@ -532,10 +532,10 @@ thbottomcontainerrightside.classList.remove("sticky");
     package(result)
 }
 totalprice=0
-let passdata=JSON.parse(localStorage.getItem("passdata")) || []
+let passdata=JSON.parse(localStorage.getItem("urbanCompany")) || []
 let add=(el)=>{
     passdata.push(el)
-localStorage.setItem("passdata",JSON.stringify(passdata))
+localStorage.setItem("urbanCompany",JSON.stringify(passdata))
     alert(`added to the cart of ${el.name}`)
     totalprice+=el.price
     let thcost=document.getElementById("thcost")
@@ -555,8 +555,8 @@ localStorage.setItem("passdata",JSON.stringify(passdata))
      
 }
 function view(){
-    console.log("theja")
-    // window.location.href="#something"
+    
+    window.location.href="estimatebill&membership.html"
 }
 
 package(main)
@@ -568,3 +568,7 @@ setInterval(function(){
     counter = 1;
   }
 }, 2000);
+
+let th_localstorage = document.getElementById('th_localstorage')
+let th_l = JSON.parse(localStorage.getItem("location"))
+th_localstorage.innerText = th_l

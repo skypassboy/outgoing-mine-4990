@@ -32,6 +32,7 @@ function getDataLocation(lat, lon)
     {
       append(res);
       console.log(res);
+      localStorage.setItem("location", JSON.stringify(res.name))
     })
     .catch(function (err)
     {
