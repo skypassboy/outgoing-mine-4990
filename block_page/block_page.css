@@ -1,0 +1,171 @@
+/* -----------------------First Navbar------------------- */
+
+#bl_navbar1{
+    display: flex;
+}
+
+#bl_main_logo{
+   margin-left: auto;
+}
+
+#bl_navbar_logos{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: auto;
+    margin-right: 0px;
+}
+
+#bl_navbar_logos>a>img{
+    height: 20px;
+    width: 20px;
+    
+}
+
+/* ______________________________ Menu Navbar____________________________ */
+
+#bl_menu_navber{
+    display: grid;
+   justify-content: space-evenly;
+}
+
+#bl_menu_navber>nav{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+}
+
+#bl_menu_navber>nav ul{
+    float: left;
+}
+
+#bl_menu_navber>nav ul li {
+    float: left;
+    list-style: none;
+    position: relative;
+    line-height: 25px;
+}
+
+#bl_menu_navber>nav>ul li a:hover{
+    color: red;
+    font-weight: bold;
+}
+
+#bl_menu_navber>nav ul li a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    padding: 20px ;
+    text-decoration: none;  
+}
+
+#bl_menu_navber>nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: beige;
+   padding-left: 0px;
+    border-radius: 0px 0px 4px 4px;    
+}
+
+#bl_menu_navber>nav ul li:hover ul {
+    display: block;
+    
+}
+
+#bl_menu_navber>nav ul li ul li {
+    width: 180px;
+    border: 1px solid gray;
+    text-align: left;
+}
+
+/* _______________________slider_style__________________________ */
+h1{
+    padding-left: 350px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.slider_hr{
+    border: 2px solid black;
+}
+
+#bl_slider {
+    margin: auto;
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bl_container{
+    width: 1600px;
+    margin: auto;
+   
+}
+.bl_subcontainer {
+    width: 85%;
+   margin: auto;
+   
+}
+
+.bl_slide_img {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.9s;
+}
+.bl_slide_img:hover {
+    box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.9) inset;
+}
+.bl_slide_img a {
+    opacity: 0;
+    text-decoration: none;
+    transform: scale(0);
+    transition: 0.8s;
+    font-size: 1.5rem;
+    color: white;
+}
+.bl_slide_img:hover a {
+    opacity: 1;
+    transform: scale(1);
+}
+.img-1{
+    background-image: url(https://de927adv5b23k.cloudfront.net/wp-content/uploads/2022/08/04220235/cleaningblog-370x280.jpg);
+}
+.img-2{
+    background-image: url(https://de927adv5b23k.cloudfront.net/wp-content/uploads/2022/03/16162100/psop-image-370x280.jpeg);
+}
+.img-3{
+    background-image: url(https://de927adv5b23k.cloudfront.net/wp-content/uploads/2022/07/28172251/pros-450x316.jpg);
+}
+.img-4{
+    background-image: url(https://de927adv5b23k.cloudfront.net/wp-content/uploads/2022/05/25130744/health-insurance-450x237.jpeg);
+}
+.img-5{
+    background-image: url(https://de927adv5b23k.cloudfront.net/wp-content/uploads/2022/07/28172838/ucfeatured-370x280.jpeg);
+}
+
+@media(max-width:1600px){
+    .bl_container{
+        width: 100%;
+    }
+}
+
+.bl_red:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.bl_underline:hover{
+
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* ______________________Beauty Part_________________________ */
+
+

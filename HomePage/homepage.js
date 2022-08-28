@@ -65,20 +65,92 @@ function getLocation()
     }
 }
 
-function HPBF3prev(){
-    document.getElementById('HP-banner-foot-3-slider-container').scrollLeft -= 270;
+//window.onscroll = function() {scrollFunction()};
+
+//function scrollFunction() {
+//  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    
+//    let navbar=document.createElement("div")
+//    navbar.setAttribute("id","HP-banner-Navbar-sticky")
+
+//    let searchdiv=document.createElement("div")
+//    searchdiv.setAttribute("id","HP-banner-Navbar-sticky-search")
+
+//    let searchimg=document.createElement("img")
+//    searchimg.src="image/HP-Search.svg"
+
+//    let searchbox=document.createElement("input")
+//    searchbox.setAttribute("id", "HP-banner-Navbar-sticky")
+//   searchbox.setAttribute("type","text")
+//    searchbox.setAttribute("placeholder","Search for Services")
+
+//    searchdiv.append(searchimg,searchbox)
+
+//    let searchdiv2=document.createElement("div")
+//    searchdiv2.setAttribute("id", "HP-banner-Navbar-sticky-service")
+
+//    let image2=document.createElement("img")
+//    image2.src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1609757731250-ba3308.png"
+//    image2.setAttribute("class","HP-service-image")
+
+//    let title2=document.createElement("h4")
+//    title2.innerText="Women's"
+//    title2.setAttribute("class","HP-search-title")
+
+//    searchdiv2.append(image2,title2)
+
+//    let searchdiv3=document.createElement("div")
+//    searchdiv3.setAttribute("id", "HP-banner-Navbar-sticky-service")
+
+//    let image3=document.createElement("img")
+//    image3.src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1609757629780-2b2187.png"
+//    image3.setAttribute("class","HP-service-image")
+
+//    let title3=document.createElement("h4")
+//    title3.innerText="Salon for Men"
+//    title3.setAttribute("class","HP-search-title")
+
+//    searchdiv3.append(image3,title3)
+
+//    let searchdiv4=document.createElement("div")
+//    searchdiv4.setAttribute("id", "HP-banner-Navbar-sticky-service")
+
+//    let image4=document.createElement("img")
+//    image3.src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_1312fb60.png"
+//    image3.setAttribute("class","HP-service-image")
+
+//    let title4=document.createElement("h4")
+//    title4.innerText="Men's Therapy"
+//    title4.setAttribute("class","HP-search-title")
+
+//    searchdiv4.append(image3,title3)
+
+//    navbar.append(searchdiv,searchdiv2,searchdiv3,searchdiv4)  
+    
+//  }
+//}
+
+function HP_Login() {
+    document.getElementById("HP-mySidenav").style.width = "25%";
 }
 
-function HPBF3next()
-{
-    document.getElementById('HP-banner-foot-3-slider-container').scrollLeft += 270;
+function HP_closeNav() {
+    document.getElementById("HP-mySidenav").style.width = "0";
 }
 
-window.onscroll = function() {scrollFunction()};
+function HP_loginbuttons(){
+    document.getElementById("HP-mySidenav").style.width = "25%";
 
-function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("HP-banner-Navbar-1")=x
-    document.getElementById("logo").style.fontSize = "25px";
-  }
+    let x=document.createElement("input")
+    x.setAttribute("class","HP-otp")
+    x.setAttribute("placeholder", "   Enter OTP here")
+
+    let btn=document.createElement("button")
+    btn.setAttribute("class","HP-otp-btn")
+    btn.innerText="LOGIN"
+    btn.addEventListener("click", function(){
+        window.location.reload('homepage.html')
+    })
+
+    document.querySelector("#HP-mySidenav").append(x,btn)
 }
