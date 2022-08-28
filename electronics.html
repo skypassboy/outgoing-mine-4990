@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="electronics.css">
+</head>
+<body>
+    <div id="thdupenavbar">
+        <div id="thrightsidenavbar">
+            <img id="navimg" src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category,w_36,dpr_1,fl_progressive:steep,q_auto/images/supply/customer-app-supply/1648463875565-a4ce06.svg" alt="">
+             
+        </div>
+        <div id="localstorage">
+            <h1>from localstorage</h1>
+        </div>
+        <div id="thleftsidenavbar">
+            <a href="index.html">Home</a>
+            <a href="Booking.html">Bookings</a>
+            <a href="block_page.html">Blog</a>
+        </div>
+       
+    </div>
+    <div id="thsidebar1">
+        <div id="thleftsidebar1">
+            <div></div>
+            <div>
+                <button id="uc">UC Safe</button>
+                <h1>Electricians</h1>
+                <div id="thstar">
+                    <div>
+                        <!-- <img id="ratingimg" src="data:image/png;base64,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" alt=""> -->
+                        <i class="fa-solid fa-star">4.75(993k)</i>
+                    </div>
+                    <div>
+                        <!-- <h3>4.75(993k)</h3> -->
+                    </div>
+                </div>
+                  </div>
+            <div></div>
+           
+
+        </div>
+        <div id="thrightsidebar2">
+          <div class="thslider">
+            <div class="thslides">
+                  <input type="radio" name="radio-btn" id="thradio1">
+
+                  <input type="radio" name="radio-btn" id="thradio2">
+
+                  <input type="radio" name="radio-btn" id="thradio3">
+
+                  <input type="radio" name="radio-btn" id="thradio4">
+                  <div class="thslide first">
+                  <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category,w_640,dpr_1,fl_progressive:steep,q_auto/images/growth/home-screen/1642768268319-6c6fb6.jpeg" alt="">
+                  </div>
+                  <div class="thslide">
+                  <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category,w_640,dpr_1,fl_progressive:steep,q_auto/images/growth/home-screen/1642768274302-18b610.jpeg" alt="">
+                  </div>
+                  <div class="thslide">
+                  <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category,w_640,dpr_1,fl_progressive:steep,q_auto/images/growth/home-screen/1642768268319-6c6fb6.jpeg" alt="">
+                  </div>
+                  <div class="thslide">
+                  <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category,w_640,dpr_1,fl_progressive:steep,q_auto/images/growth/home-screen/1642768214070-7918ce.jpeg" alt="">
+                  </div>
+                  <div class="navigation-auto">
+                  <div class="thauto-btn1"></div>
+                  <div class="thauto-btn2"></div>
+                  <div class="thauto-btn3"></div>
+                  <div class="thauto-btn4"></div>
+                  </div>
+                 
+            </div>
+                 
+                  <div class="navigation-manual">
+                      <label for="radio1" class="thmanual-btn"></label>
+                      <label for="radio2" class="thmanual-btn"></label>
+                      <label for="radio3" class="thmanual-btn"></label>
+                      <label for="radio4" class="thmanual-btn"></label>
+                  </div>
+                  
+          </div>
+
+
+        </div>
+
+
+    </div>
+    <div id="thsidebar2">
+        
+
+    </div>
+    <div id="thbottomcontainer">
+        <div id="thbottomcontainerleftside"></div>
+        <div id="thbottomcontainerrightside">
+            <div id="thbottomcontainerrightsidemain">
+                <div id="thsave" class="thsaveall" style="background-color: rgb(213, 241, 241);">
+                    <div style="background-color: rgb(213, 241, 241); border: 1px solid rgb(213, 241, 241); margin: auto;">
+                       <i class="fa-brands fa-discourse"></i> 
+                        
+                    </div>
+                    <div id="thsavetop">
+                        <div>
+                            <li class="liclass">Save 15% on every order</li>
+                        </div>
+                        <div>
+                            <li class="liclass">Get Plus now</li>
+                        </div>
+                       
+
+                    </div>
+                   
+                </div>
+                <div id="thsave1" class="thsaveall" style="background-color: rgb(213, 241, 241);" >
+
+                    <div style="background-color: rgb(213, 241, 241); border: 1px solid rgb(213, 241, 241); margin: auto" >
+                        <i class="fa-solid fa-tag"></i></div>
+                    <div id="thsavetop1">
+                        <div>
+                            <li class="liclass">5% Simpl cashback up to 750</li>
+                        </div>
+                        <div>
+                            <li class="liclass">Get up to 750 Cashback</li>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="thsave2"  class="thsaveall"  style="background-color: rgb(213, 241, 241);" >
+                    <div style="background-color: rgb(213, 241, 241); border: 1px solid rgb(213, 241, 241); margin: auto">
+                        <i class="fa-solid fa-tag"></i></div>
+                    <div id="thsavetop2">
+                        <div>
+                            <li class="liclass">Assured cashback</li>
+                        </div>
+                        <div>
+                            <li class="liclass">Upto 500 off</li>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="thsave3"  class="thsaveall"  style="background-color: rgb(213, 241, 241);" >
+                    <div style="background-color: rgb(213, 241, 241); border: 1px solid rgb(213, 241, 241); margin: auto">
+                        <i class="fa-solid fa-tag"></i>
+                    </div>
+                    <div id="thsavetop3">
+                        <div>
+                            <li class="liclass">Get upto 500 cashback</li>
+                        </div>
+                        <div>
+                            <li class="liclass">Valid on Mobikwik Wallet</li>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div id="thcostprice">
+                <div>
+                    <h1 id="thcost"></h1>
+                </div>
+                <div id="thviewcart"></div>
+            </div>
+           
+
+        </div>
+
+    </div>
+</body>
+</html>
+<script src="electronics.js"></script>
