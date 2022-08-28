@@ -41,7 +41,10 @@ body{
     margin: 0px;
     
 }
-
+.rotating_coin>div>p{
+    font-family: 'PT Sans', sans-serif;
+    color: #383b3b;
+}
 .rotating_coin>div>img+img{
     position: absolute;
     left: 16px;
@@ -479,4 +482,7 @@ body{
 #bill_pay_div>button>p{
     margin: 14px;
     margin-left: 0px;
+}
+#main_heading{
+    margin-left: 5%;
 }

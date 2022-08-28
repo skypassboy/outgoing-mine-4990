@@ -16,24 +16,29 @@ function createP(){
 function createD(){
     return document.createElement('div')
 }
+let net_total_g = 0
 // ============================================returning div and p=======
 let append_payment = ()=>{
     let net_total = 0
-    let data = JSON.parse(localStorage.getItem("urbanComapny")) || [] 
+    let fix_discount = 106
+    let data = JSON.parse(localStorage.getItem("urbanCompany")) || [] 
+    let service = JSON.parse(localStorage.getItem("service"))
+    // let service = JSON.parse(localStorage.getItem("service"))
+    
+    // let data = JSON.parse(localStorage.getItem("urbanCompany")) 
 data.forEach((el)=>{
     net_total+=el.price
-    
 })
-
+    
+    
+console.log(net_total)
      
-     let fix_discount = 106
     //  console.log(net_total);
     let div = createDiv("Item total", net_total)
     let convenience = createDiv('Convenience fees', 49)
     document.getElementById('payment_detail').append(div, convenience)
    
 let months_near_btn = document.getElementById('months_near_btn')
-let service = JSON.parse(localStorage.getItem("service"))
 if(service=="249"){
     months_near_btn.innerText = "6 months"
 }else if(service=="299"){
@@ -47,7 +52,7 @@ if(service=="249"){
 let final_bill = net_total+49
 // console.log(final_bill)
 let sum_total_p = document.getElementById('sum_total')
-final_bill = final_bill-fix_discount
+final_bill = final_bill
 sum_total_p.innerText = final_bill
 console.log(final_bill);    
 localStorage.setItem("finalBill", JSON.stringify(final_bill))
@@ -106,13 +111,13 @@ append_payment()
          
 
 
-let data = JSON.parse(localStorage.getItem("urbanComapny")) || [] 
+let data = JSON.parse(localStorage.getItem("urbanCompany")) || [] 
 
  
 let itemsAppend = (data)=>{
     let count = 1 
     // re_add_remove.innerHTML=null
-  data.forEach(({name, price, special}) => {
+  data.forEach((el, index) =>{
     // console.log(name);
     let re_add_remove  = document.getElementById('item_add')
     
@@ -143,16 +148,24 @@ let itemsAppend = (data)=>{
         p2.innerText = count
         //   priceing =  priceing * count
         if(count<1){
-            window.location.href = "\estimatebill&membership.html"
-        }
+            
+            let data1 = JSON.parse(localStorage.getItem("urbanCompany")) || [] 
+            data1.splice(index, 1)
+            localStorage.setItem("urbanCompany", JSON.stringify(data1))
+            // window.location.href = "\estimatebill&membership.html"
+            window.location.reload()
+            if(data1.length==0)(
+                window.location.href = "\estimatebill&membership.html"
+            )
+        } 
         let pr;
         p2.innerText = count
-        pr = +p_outer2.innerText - price
+        pr = +p_outer2.innerText - el.price
         p_outer2.innerText = pr
         let sum_total_p1 = document.getElementById('sum_total')
         let sum2 = +sum_total_p1.innerText
           
-        sum_total_p1.innerText = sum2-price
+        sum_total_p1.innerText = sum2-el.price
         sum_total_p1.style.color = "blue"
       
         // let pay_detail = document.getElementsByClassName('amount_all_type')
@@ -173,7 +186,7 @@ let itemsAppend = (data)=>{
         // document.getElementById('counting').innerText = count
         let pr;
         p2.innerText = count
-        pr = +p_outer2.innerText + price
+        pr = +p_outer2.innerText + el.price
         p_outer2.innerText = pr
         // let pay_detail = document.getElementsByClassName('amount_all_type')
        
@@ -181,13 +194,13 @@ let itemsAppend = (data)=>{
         let sum_total_p1 = document.getElementById('sum_total')
         let sum2 = +sum_total_p1.innerText
           
-        sum_total_p1.innerText = sum2+price
+        sum_total_p1.innerText = sum2+el.price
         sum_total_p1.style.color = "blue"
   })
     
     
-    p_outer.innerText = `${name} ${special}`
-    p_outer2.innerText = price
+    p_outer.innerText = `${el.name} ${el.special}`
+    p_outer2.innerText = el.price
     div_child.append(p1, p2, p3)
     div_child.setAttribute("id", "incre_decre_count")
     main_div.append(p_outer, div_child, p_outer2)
@@ -239,10 +252,11 @@ let x = "Home"
  }       
  
  
-
-      
+let city = JSON.parse(localStorage.getItem("location"))
+let l_map_city = document.getElementById("location_map_head")
+l_map_city.innerText = city
  let map = ()=>{
-    let other = `https://maps.google.com/maps?q=${"Delhi"}&t=&z=13&ie=UTF8&iwloc=&output=embed`
+    let other = `https://maps.google.com/maps?q=${city}&t=&z=13&ie=UTF8&iwloc=&output=embed`
     let iframe = document.getElementById("gmap_canvas")
     iframe.src =other
     console.log(other)
@@ -354,8 +368,12 @@ proceed_checkout.addEventListener('click', ()=>{
     //  finalBill
     let amount_finally =  document.getElementById('amount_finally')
     amount_finally.innerHTML = `<span>&#x20B9;</span>${finalBill}`
-    localStorage.setItem("final_bill_urban", JSON.stringify(finalBill))
-    window.location.href="../phonepay/payment.html"
+    amount_finally.addEventListener('click', ()=>{
+        localStorage.setItem("final_bill_urban", JSON.stringify(finalBill))
+         window.location.href ="../../outgoing-mine-4990/phonepay/payment.html"
+    })
+    
+    // window.location.href=""
 })
 
 }

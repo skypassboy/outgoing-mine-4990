@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      .main_div{
+        margin: auto;
+      }
+      .sub_div{
+        margin: auto;
+        width: 50vh;
+        height: 70vh;
+        background-color: antiquewhite;
+        overflow: hidden;
+      }
+      #header{
+        display: flex;
+        padding: 10px;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 600;
+        background-color: #673ab7;
+        color: white;
+      }
+      #header>.fa-arrow-left{margin-right: 10px;}
+      .payment_history{
+        
+        background-color: white;
+        margin-left: 20px;
+        width: 70%;
+        height: 100px;
+        border-radius: 10px;
+      }
+      .trans_info{
+       
+        display: flex;
+        justify-content:flex-start;
+        
+        align-items: center;
+      }
+      .trans_info>img{
+        display: inline-block;
+         width: 30px;
+         padding-left: 5px;
+      }
+      .payment_history{
+        margin-top: 10px;
+      }
+      .payment_history>.trans_info>p{
+        text-align: left;
+        padding-left: 10px;
+    }
+    .payment_history>.trans_info>.fa-angle-right{
+        margin-left: auto;
+        padding: 10px;
+    } 
+    .payment_history>p{
+        font-size: 18px;
+        font-weight: 600;
+        padding: 0px;
+        padding-left: 15px;
+        padding-top: 6px;
+        margin: 0px;
+    }  
+    .payment_history>hr{
+        width: 80%;
+    }
+    .sub_div{
+        display: flex;
+        flex-direction: column;
+    }    
+    .sub_div>#enter_payment{
+       /* background-color:#673ab7; */
+       margin-top: auto;
+    }  
+    .sub_div>#enter_payment{
+        /* padding: 10px 0px; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }   
+    .sub_div>#enter_payment>input{
+        
+        outline: none;
+        border: none;
+        margin: auto;
+        display: block;
+        width: 100%;
+        padding: 10px 5px;
+        
+        background-color: rgb(250, 250, 250);
+    } 
+    .sub_div>#enter_payment>#send_money{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: rgb(235, 228, 228);
+    }   
+     .fa-paper-plane{
+        display: block;
+        margin: auto;
+        padding: 6px;
+    }
+    
+        
+        
+
+    </style>
+</head>
+<body>
+    <div class="main_div">
+        <div class="sub_div">
+          <div id="header"><i class="fa fa-arrow-left"></i>Send Money</div>
+           <div class="payment_history">
+             <p class="amount_transferred">400 &#8377;</p>
+             <hr>
+             <div class="trans_info">
+               <img src="payment-success_small.png" alt="status">
+                <p>Receive Instantly</p>
+                <i class="fa fa-angle-right"></i>
+             </div>
+           </div>
+           <div id="enter_payment">
+             <input type="text" name="" id="" placeholder="Enter Amont">
+            <div id="send_money">
+             <i class="fa fa-paper-plane" aria-hidden="true"></i>
+            </div>
+           </div>
+        </div>
+    </div>
+</body>
+</html>
+<!-- <script src="payement.js"></script> -->

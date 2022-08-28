@@ -139,7 +139,7 @@ function addtoLocalStorage() {
   localStorage.setItem("service", JSON.stringify(249))
   let total_price1 = document.getElementById('total_price')
   
-  let data = JSON.parse(localStorage.getItem("urbanComapny")) || [] 
+  let data = JSON.parse(localStorage.getItem("urbanCompany")) || [] 
   let price = 0
   data.forEach((el)=>{
     price = price+=el.price
