@@ -308,8 +308,8 @@ let appendUserData = ()=>{
     div.setAttribute('class', "address_u_div")
     symbol_home.setAttribute("class", "fa fa-home")
     p_heading.innerText = u.address_type
-    data_add.innerText = `${u.address} ${u.landmark} Delhi`
-    
+    let rn = JSON.parse(localStorage.getItem("location"))
+    data_add.innerText = `${u.address} ${u.landmark} ${rn}`
     div.append(symbol_home, p_heading, data_add)
    let u_address = document.getElementById('append_address_u') 
    u_address.append(div)  
