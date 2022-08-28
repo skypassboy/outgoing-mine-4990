@@ -532,10 +532,10 @@ thbottomcontainerrightside.classList.remove("sticky");
     package(result)
 }
 totalprice=0
-let passdata=JSON.parse(localStorage.getItem("passdata")) || []
+let urbanCompany=JSON.parse(localStorage.getItem("urbanCompany")) || []
 let add=(el)=>{
-    passdata.push(el)
-localStorage.setItem("passdata",JSON.stringify(passdata))
+    urbanCompany.push(el)
+localStorage.setItem("urbanCompany",JSON.stringify(urbanCompany))
     alert(`added to the cart of ${el.name}`)
     totalprice+=el.price
     let thcost=document.getElementById("thcost")
@@ -555,8 +555,8 @@ localStorage.setItem("passdata",JSON.stringify(passdata))
      
 }
 function view(){
-    console.log("theja")
-    // window.location.href="#something"
+    
+    window.location.href="estimatebill&membership.html"
 }
 
 package(main)
