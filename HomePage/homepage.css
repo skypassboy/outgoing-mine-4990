@@ -5,6 +5,10 @@
     font-family: axiforma-semiBold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+a{
+    text-decoration: none;
+}
+
 #HP-banner-1{
     width: 100%;
     height: 600px;
@@ -118,6 +122,17 @@ option{
     margin: auto;
     margin-top: 25px;
 }
+.HP-banner-foot-3-slider-img{
+    width: 270px;
+    height: 150px;
+    margin-top: 25px;
+    border-radius: 5px;
+}
+.HP-banner-foot-3-slider-img:hover{
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+}
 #HP-banner-foot-3-slider>img{
     width: 270px;
     height: 150px;
@@ -173,11 +188,114 @@ option{
 }
 #HP-banner-footer{
     width: 100%;
-    height: 700px;
+    height: auto;
     background-color: black;
 }
 #HP-banner-footer-1{
    width: 75%; 
    margin: auto;
+}
+.HP-sidenav{
+    height: 100%;
+    width: 0;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+  
+.HP-sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(33, 33, 33);
+    display: block;
+    transition: 0.3s;
+}
+  
+.HP-sidenav a:hover{
+    color: black;
+}
+  
+.HP-sidenav .HP-closebtn{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    left: 0;
+}
+.HP-otp{
+    width: 226px;
+    height: 50px;
+    margin-top: 30px;
+    font-size: 16px;
+    color: gray;
+    margin-left: 30px;
+    border-radius: 5px 0px 0px 5px;
+    border: 0px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.HP-otp-btn{
+    width: 100px;
+    height: 56px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 0px 5px 5px 0px;
+}
+#HP-banner-footer-1{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-top: 30px;
+}
+#HP-banner-footer-1>a{
+    text-decoration: none;
+    margin-right: 30px;
+    color: rgb(117, 117, 117);
+    line-height: 2;
+    font-size: 17.5px;
+    font-weight: 550;
+}
+#HP-banner-footer-1>a:hover{
+    color: white;
+    transform: scale(1.01);
+}
+#HP-banner-footer-2{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+}
+#HP-banner-footer-2>a{
+    text-decoration: none;
+    margin-right: 30px;
+    color: rgb(117, 117, 117);
+    line-height: 2;
+    font-size: 17.5px;
+    font-weight: 550;
+}
+#HP-banner-footer-2>a:hover{
+    color: white;
+    transform: scale(1.01);
+}
+#HP-banner-footer-3{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+}
+#HP-banner-footer-3-a{
+    display: flex;
+    gap: 15px;
 }
 
