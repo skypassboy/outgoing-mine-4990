@@ -55,6 +55,7 @@ transfer.addEventListener('click', ()=>{
         process.append(processing, msg, btn_div)
         process.style.display="block"
         
+        document.getElementById('payment').innerHTML =null
     }).catch((err)=>{
         console.log(err)
         console.log("hello")
