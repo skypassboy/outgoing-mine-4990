@@ -35,7 +35,7 @@
       <div class="lp_child1_sub_child2 design_child_div">
         <p class="lp_bold">Estimated savings</p>
       <div>
-       <h1>&#x20B9;1440</h1>
+       <h1 id="exp_price_accor">&#x20B9;1440</h1>
        <img src="lp_img/money.png" alt="money">
       </div> 
        <p class="lp_service">No. of Services / Year</p>
@@ -162,9 +162,9 @@
             <div>
               <p>BOUGHT 6 LAKH+ TIMES</p>
               <h3>12 months</h3>
-              <p id="remove_add_12months" class="">299</p>
+              <p id="remove_add_12months" class=""><span>&#x20B9;</span>299</p>
             </div>
-            <button>Remove</button>
+            <button id="for12months">Add</button>
           </div>
         </div>
 
@@ -172,18 +172,25 @@
         <div>
           <div>
             <h3>6 months</h3>
-            <p id="plan6_month">249</p>
+            <p id="plan6_month"><span>&#x20B9;</span>249</p>
           </div>
-          <button id="remove_add_6months">Add</button>
+          <button id="remove_add_6months">Remove</button>
         </div>
      </div>
   </div>
       <p class="full_price"><a href="">No, I will pay full price <span>&#8680;</span></a></p>
     </div>
 </div>    
-     
-      
-  </div><!-- lp_container_end -->
+</div><!-- lp_container_end -->
+ <!-- total amount div     -->
+ <div id="total_price">
+  <p id="discount_coupne"><span>%</span><span>&#x20B9;</span>98 Plus discount applied</p>
+  <div>
+    <h3 id="total_amount">0</h3>
+    <button class="proceed_payment" id="proceed_pay">Proceed</button>
+  </div>
+ </div>
+ <!-- <span> &#8674</span> -->
 </body>
 </html>
 <script src="estimatebill&membership.js"></script>
