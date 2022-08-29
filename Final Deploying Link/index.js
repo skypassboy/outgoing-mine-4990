@@ -150,8 +150,11 @@ function HP_loginbuttons(){
     btn.setAttribute("class","HP-otp-btn")
     btn.innerText="LOGIN"
     btn.addEventListener("click", function(){
-        window.location.reload('homepage.html')
+      myfunc()
     })
-
     document.querySelector("#HP-mySidenav").append(x,btn)
+}
+function myfunc(){
+  let y=document.getElementById('HP-Login-signUp')
+  y.textContent="Logout"
 }
