@@ -132,6 +132,9 @@ function getLocation()
 //}
 
 function HP_Login() {
+  if(document.getElementById('HP-Login-signUp').innerText=="Logout"){
+    document.getElementById('HP-Login-signUp').textContent="Login / SignUp"
+  }
     document.getElementById("HP-mySidenav").style.width = "25%";
 }
 
@@ -157,4 +160,5 @@ function HP_loginbuttons(){
 function myfunc(){
   let y=document.getElementById('HP-Login-signUp')
   y.textContent="Logout"
+  document.getElementById("HP-mySidenav").style.width = "0";
 }
