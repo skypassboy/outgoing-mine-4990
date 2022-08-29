@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Company - Get Expert Professional Services at Home</title>
+    <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/urbanclap/image/upload/v1467812027/uc_logo.png">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="HP-banner-1">
+        <div id="HP-banner-Navbar">
+            <div id="HP-banner-Navbar-1">
+                <a href="index.html"><img src="https://res.cloudinary.com/urbanclap/image/upload/images/growth/home-screen/1631097450980-d2de38.png" alt="" style="width: 130px; height: 40px;"></a>
+            </div>
+            <div id="HP-banner-Navbar-2">
+                <a href="../block_page/block_page.html" style="text-decoration: none;font-size: 17.5px; font-weight: 700;color: #fff;margin-right: 20px;">Blog</a>
+                <a href="https://partner.urbancompany.com/?utm_source=Customer_web&utm_campaign=header&utm_medium=homepage" style="font-size: 17.5px; font-weight: 700; color: #fff;margin-right: 20px; text-decoration: underline;">Register As A Professional</a>
+                <span style="text-decoration: none;font-size: 17.5px; font-weight: 700;color: #fff;margin-right: 20px; cursor: pointer;" onclick="HP_Login()">Login / Sign Up</span>
+            </div>
+        </div>
+        <p class="HP-banner-1p">Home</p>
+        <h1 class="HP-banner-1h">Home servivces, on demand</h1>
+        <div id="HP-banner-2">
+            <button id="HP-location" style="border: 0; width: 180px; height: 60px; background-color: #fff; border-radius: 5px;" onclick="getLocation()"><img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep/t_medium_res_template/images/supply/partner-app-supply/1661338258375-6c99b1.png" alt="" style="margin-left: 10px; width: 20px; height: 14px;"><span id="HP-Location-city" style="width: 110px; height: 20px; font-size: 20px; font-weight: 400; color: RGB(36, 36, 36);margin-left: 10px;">Delhi NCR</span><span id="HP-Location_arrow" style="font-size: 20px;margin-left: 10px;">&#9660</span></button>
+            <div id="HP-Search" style="background-color: white; width: 570px; height: 59px; border-radius: 5px;"><img src="image/HP-Search.svg" alt=""><span><input type="text" placeholder="Search for Services" id="HP-Searchbar" style="border: 0; width: 470px; height: 59px; border-radius: 5px;"></span></div>
+        </div>
+        <div id="HP-subtitles"><span style="text-decoration: underline;">Women's Therapies</span>, <span style="text-decoration: underline;">Salon for Men</span>, <span style="text-decoration: underline;">Men's Therapies</span>, <span>etc.</span></div>
+    </div>
+
+    <div id="HP-mySidenav" class="HP-sidenav">
+        <a href="javascript:void(0)" class="HP-closebtn" onclick="HP_closeNav()">&times; <span style="font-size: 20px; top: 0;">Please Login to Continue</a>
+        <div style="width: 326px; height: 54px; margin-left: 30px; margin-top: 30px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;"><img src="https://res.cloudinary.com/urbanclap/image/upload/t_medium_res_template/images/supply/partner-app-supply/1661338258375-6c99b1.png" alt="" style="width: 20px; height: 15px; margin-left: 10px; padding-top: 5px;"><span>  +91</span><span>  &#9660</span><span><input type="Number" placeholder="You phone number" style="width: 232px; height:49px; right:0px; margin-left: 3px; border: 0.5px;"></span></div>
+        <button id="HP-navbar-loginbutton" style="width: 326px; height: 54px; margin-left: 30px; margin-top: 30px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; color: white;cursor: pointer; border-radius: 5px; background-color: rgb(33, 33, 33); font-size: 16px;font-weight: 600;" onclick="HP_loginbuttons()">Continue</button>
+      </div>
+
+    <div id="HP-banner-foot">
+        <a href="mens.html">
+            <div>
+                <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1609757635235-1a139e.png" alt="" style="width: 32px; height: 32px;">
+                <p class="HP-banner-foot-p">Salon for Women</p>
+            </div>
+        </a>
+        
+        <a href="https://www.urbancompany.com/delhi-ncr-women-hair-services">
+            <div>
+                <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/supply/customer-app-supply/1635331606894-7b633f.png" alt="" style="width: 32px; height: 32px;">
+                <p class="HP-banner-foot-p">Hair, Skin & Nails</p>
+            </div>
+        </a>
+        
+        <a href="">
+            <div>
+                <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_1312fb60.png" alt="" style="width: 32px; height: 32px;">
+                <p class="HP-banner-foot-p">Women's<br>Therapies</p>
+            </div>
+        </a>
+        
+        <a href="mens.html">
+            <div>
+                <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1609757629780-2b2187.png" alt="" style="width: 32px; height: 32px;">
+                <p class="HP-banner-foot-p">Salon for Men</p>
+            </div>
+        </a>
+        
+        <a href="https://www.urbancompany.com/delhi-ncr-massage-for-men">
+            <div>
+                <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1609757731250-ba3308.png" alt="" style="width: 32px; height: 32px;">
+                <p class="HP-banner-foot-p">Men's Therapies</p>
+            </div>
+        </a>
+        
+    </div>
+
+    <h1 style="text-align: center; margin-top: 50px; color: rgb(33, 33, 33); font-weight: 700; font-size: 32px; line-height: 48px;">Home Service</h1>
+
+    <div id="HP-banner-foot-2">
+        <a href="electronics.html">
+            <div>
+                <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_72d18950.png" alt="" style="width: 32px; height: 32px;">
+                <p class="HP-banner-foot-p">Electronics
+                </p>
+            </div>
+        </a>
+        <a href="">
+            <div>
+                <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1631679515206-a69389.png" alt="" style="width: 32px; height: 32px;">
+                <p class="HP-banner-foot-p">Home Painting</p>
+            </div>
+        </a>
+        <a href="">
+            <div>
+                <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_6b1f5250.png" alt="" style="width: 32px; height: 32px;">
+                <p class="HP-banner-foot-p">Cleaning & Pest</p>
+            </div>
+        </a>
+        <a href="">
+            <div>
+                <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1641213886588-90a903.png" alt="" style="width: 32px; height: 32px;">
+                <p class="HP-banner-foot-p">Disinfection</p>
+            </div>
+        </a>
+        <a href="">
+            <div>
+                <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_6fbad370.png" alt="" style="width: 32px; height: 32px;">
+                <p class="HP-banner-foot-p">Home Repairs</p>
+            </div>
+        </a>
+    </div>
+
+    <div id="HP-banner-foot-3">
+        <div id="HP-banner-foot-3-slider">
+            <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_568/t_high_res_template/images/growth/luminosity/1660311850637-a2896d.jpeg" alt="">
+            <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_568/t_high_res_template/images/growth/luminosity/1661165058628-e5e183.jpeg" alt="">
+            <a href="https://www.urbancompany.com/delhi-ncr-professional-cleaning-services">
+                <img class="HP-banner-foot-3-slider-img" src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_568/t_high_res_template/images/growth/luminosity/1661165004424-53bb8d.jpeg" alt="">
+            </a>
+            <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_568/t_high_res_template/images/growth/luminosity/1660825272844-85d4fb.png" alt="">
+        </div>
+    </div>
+
+    <div id="HP-banner-body">
+        <h1 style="text-align: center; margin-top: 75px; color: rgb(33, 33, 33); font-weight: 700; font-size: 32px; line-height: 48px;">New Category Launches</h1>
+        <div id="HP-banner-body-a">
+            <a href="">
+                <div>
+                    <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/luminosity/1646140576865-02aba1.jpeg" alt="" class="HP-banner-body-a-img">
+                    <h4 style="text-align: center; font-size: 16px; font-weight: 500; color: rgb(33, 33, 33);margin-top: 5px;">Expert Counselling</h4>
+                    <p style="text-align: center; font-size: 15px; font-weight: 400; color: RGB(117, 117, 117); margin-top: 3px;">Advanced Skin Treatments</p>
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/categories/bigpictures/carpenter.jpg" alt="" class="HP-banner-body-a-img">
+                    <h4 style="text-align: center; font-size: 16px; font-weight: 500; color: rgb(33, 33, 33);margin-top: 5px;">Furniture Making, Upholstery & Polish</h4>
+                    <p></p>
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/home-screen/1635829954373-d05590.jpeg" alt="" class="HP-banner-body-a-img">
+                    <h4 style="text-align: center; font-size: 16px; font-weight: 500; color: rgb(33, 33, 33);margin-top: 5px;">Air Purifiers</h4>
+                    <p style="text-align: center; font-size: 15px; font-weight: 400; color: RGB(117, 117, 117); margin-top: 3px;">Flat ₹100 off</p>
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/supply/customer-app-supply/1643120136395-80523e.jpeg" alt="" class="HP-banner-body-a-img">
+                    <h4 style="text-align: center; font-size: 16px; font-weight: 500; color: rgb(33, 33, 33);margin-top: 5px;">Buy RO Water Purifiers</h4>
+                    <p></p>
+                </div>
+            </a>  
+        </div>
+    </div>
+
+    <div id="HP-banner-body">
+        <h1 style="text-align: center; margin-top: 45px; color: rgb(33, 33, 33); font-weight: 700; font-size: 32px; line-height: 48px;">Salon, Spa & Massage services</h1>
+        <h3 style="text-align: center; color: rgb(117, 117, 117); font-weight: 400; font-size: 18px; line-height: 28px;">Hygenic & Single use products | Low-contact services</h3>
+        <div id="HP-banner-body-a" style="margin-top: 0;">
+            <a href="">
+                <div>
+                    <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/home-screen/1603078782132-dfcd55.jpeg" alt="" class="HP-banner-body-a-img">
+                    <h4 style="text-align: center; font-size: 16px; font-weight: 500; color: rgb(33, 33, 33);margin-top: 5px;">Salon Prime</h4>
+                    <p style="text-align: center; font-size: 15px; font-weight: 400; color: RGB(117, 117, 117); margin-top: 3px;">Free Waxing</p>
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/home-screen/1615874646690-66ab68.jpeg" alt="" class="HP-banner-body-a-img">
+                    <h4 style="text-align: center; font-size: 16px; font-weight: 500; color: rgb(33, 33, 33);margin-top: 5px;">Salon for Men</h4>
+                    <p style="text-align: center; font-size: 15px; font-weight: 400; color: RGB(117, 117, 117); margin-top: 3px;">Flat ₹100 off</p>
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/home-screen/1601893536279-77bf02.png" alt="" class="HP-banner-body-a-img">
+                    <h4 style="text-align: center; font-size: 16px; font-weight: 500; color: rgb(33, 33, 33);margin-top: 5px;">Spa for Women</h4>
+                    <p style="text-align: center; font-size: 15px; font-weight: 400; color: RGB(117, 117, 117); margin-top: 3px;">Free Head Massage</p>
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/supply/customer-app-supply/1606211470897-f4afbc.jpeg" alt="" class="HP-banner-body-a-img">
+                    <h4 style="text-align: center; font-size: 16px; font-weight: 500; color: rgb(33, 33, 33);margin-top: 5px;">Massage for Men</h4>
+                    <p style="text-align: center; font-size: 15px; font-weight: 400; color: RGB(117, 117, 117); margin-top: 3px;">Starts at ₹499</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div id="HP-banner-body">
+        <h1 style="text-align: center; margin-top: 75px; color: rgb(33, 33, 33); font-weight: 700; font-size: 32px; line-height: 48px;">Cleaning & Pest Control</h1>
+        <div id="HP-banner-body-a">
+            <div>
+                <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/home-screen/1625159882387-9585c7.jpeg" alt="" class="HP-banner-body-a-img">
+                <h4 style="text-align: center; font-size: 16px; font-weight: 500; color: rgb(33, 33, 33);margin-top: 5px;">Bathroom And Kitchen Cleaning</h4>
+                <p style="text-align: center; font-size: 15px; font-weight: 400; color: RGB(117, 117, 117); margin-top: 3px;"></p>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/luminosity/1632396793425-1a5418.jpeg" alt="" class="HP-banner-body-a-img">
+                <h4 style="text-align: center; font-size: 16px; font-weight: 500; color: rgb(33, 33, 33);margin-top: 5px;">Full-Home Cleaning</h4>
+                <p></p>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/home-screen/1630420912606-2fffa6.jpeg" alt="" class="HP-banner-body-a-img">
+                <h4 style="text-align: center; font-size: 16px; font-weight: 500; color: rgb(33, 33, 33);margin-top: 5px;">Sofa & Carpet Cleaning</h4>
+                <p style="text-align: center; font-size: 15px; font-weight: 400; color: RGB(117, 117, 117); margin-top: 3px;"></p>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/luminosity/1631159612066-53b210.jpeg" alt="" class="HP-banner-body-a-img">
+                <h4 style="text-align: center; font-size: 16px; font-weight: 500; color: rgb(33, 33, 33);margin-top: 5px;">Cockroach, Ant & General Pest Control</h4>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="HP-banner-body">
+        <h1 style="text-align: center; margin-top: 45px; color: rgb(33, 33, 33); font-weight: 700; font-size: 32px; line-height: 48px;">UC Luxury Experience</h1>
+        <h3 style="text-align: center; color: rgb(117, 117, 117); font-weight: 400; font-size: 18px; line-height: 28px;">Top Professionals | Best Brands | Premium Experience</h3>
+        <div id="HP-banner-body-a" style="margin-top: 0;">
+            <a href="">
+                <div>
+                    <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/home-screen/1631883165804-025664.png" alt="" class="HP-banner-body-a-img">
+                    <h4 style="text-align: center; font-size: 16px; font-weight: 500; color: rgb(33, 33, 33);margin-top: 5px;">Salon Luxe</h4>
+                    <p style="text-align: center; font-size: 15px; font-weight: 400; color: RGB(117, 117, 117); margin-top: 3px;"></p>
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/home-screen/1631883164057-dd5910.png" alt="" class="HP-banner-body-a-img">
+                    <h4 style="text-align: center; font-size: 16px; font-weight: 500; color: rgb(33, 33, 33);margin-top: 5px;">Salon for Men Royale</h4>
+                    <p style="text-align: center; font-size: 15px; font-weight: 400; color: RGB(117, 117, 117); margin-top: 3px;"></p>
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/home-screen/1631883164904-165c1e.png" alt="" class="HP-banner-body-a-img">
+                    <h4 style="text-align: center; font-size: 16px; font-weight: 500; color: rgb(33, 33, 33);margin-top: 5px;">Spa Luxe</h4>
+                    <p style="text-align: center; font-size: 15px; font-weight: 400; color: RGB(117, 117, 117); margin-top: 3px;"></p>
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/home-screen/1631883164502-08f9f6.png" alt="" class="HP-banner-body-a-img">
+                    <h4 style="text-align: center; font-size: 16px; font-weight: 500; color: rgb(33, 33, 33);margin-top: 5px;">Massage Therapy for Men Royale</h4>
+                    <p style="text-align: center; font-size: 15px; font-weight: 400; color: RGB(117, 117, 117); margin-top: 3px;"></p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div id="HP-banner-body">
+        <h1 style="text-align: center; margin-top: 45px; color: rgb(33, 33, 33); font-weight: 700; font-size: 32px; line-height: 48px;">Home Repairs</h1>
+        <div id="HP-banner-body-a">
+            <a href="">
+                <div>
+                    <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/categories/bigpictures/carpenter.jpg" alt="" class="HP-banner-body-a-img">
+                    <h4 style="text-align: center; font-size: 16px; font-weight: 500; color: rgb(33, 33, 33);margin-top: 5px;">Furniture Making, Upholster & Polish</h4>
+                    <p style="text-align: center; font-size: 15px; font-weight: 400; color: RGB(117, 117, 117); margin-top: 3px;"></p>
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/categories/home_screen/carpenter.jpg" alt="" class="HP-banner-body-a-img">
+                    <h4 style="text-align: center; font-size: 16px; font-weight: 500; color: rgb(33, 33, 33);margin-top: 5px;">Carpenters</h4>
+                    <p></p>
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/categories/category_v2/category_a91b73d0.jpeg" alt="" class="HP-banner-body-a-img">
+                    <h4 style="text-align: center; font-size: 16px; font-weight: 500; color: rgb(33, 33, 33);margin-top: 5px;">Electricians</h4>
+                    <p style="text-align: center; font-size: 15px; font-weight: 400; color: RGB(117, 117, 117); margin-top: 3px;"></p>
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/categories/home_screen/plumber.jpg" alt="" class="HP-banner-body-a-img">
+                    <h4 style="text-align: center; font-size: 16px; font-weight: 500; color: rgb(33, 33, 33);margin-top: 5px;">Plumbers</h4>
+                    <p></p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div id="HP-banner-images">
+        <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_2304/t_high_res_template/categories/category_v2/category_a4e46fa0.png" alt="">
+    </div>
+    <a href="">
+        <div id="HP-banner-images">
+            <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_2304/t_high_res_template/images/growth/home-screen/1624344861242-558286.png" alt="">
+        </div>
+    </a>
+    <div id="HP-banner-images">
+        <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_2304/t_high_res_template/categories/category_v2/category_3cffdf20.png" alt="">
+    </div>
+
+    <div id="HP-banner-footer">
+        <div id="HP-banner-footer-1">
+            <a href="https://www.urbancompany.com/about">About Us</a>
+            <a href="https://www.urbancompany.com/impact">UC Impact</a>
+            <a href="https://www.urbancompany.com/terms">Terms & Conditions</a>
+            <a href="https://www.urbancompany.com/privacy-policy">Privacy Policy</a>
+            <a href="https://www.urbancompany.com/privacy-policy">Interest-Based Advertising</a>
+            <a href="https://www.urbancompany.com/anti-discrimination-policy">Anti Discrimination Policy</a>
+            <a href="https://www.urbancompany.com/blog">Blog</a>
+            <a href="https://www.urbancompany.com/reviews">Reviews</a>
+            <a href="https://www.urbancompany.com/near-me">Near Me</a>
+            <a href="https://careers.urbanclap.com/">Careers</a>
+            <a href="https://www.urbancompany.com/purchase-giftcards">Gift Cards</a>
+            <a href="https://www.urbancompany.com/contact-us">Contact Us</a>
+            <a href="https://www.urbancompany.com/quick-links">Quick Links</a>
+        </div>
+
+        <hr style="width: 80%; margin: auto; margin-top: 20px;">
+
+        <div id="HP-banner-footer-2">
+            <br>
+            <h4 style="font-size: 20px; font-weight: 600; color: rgb(255, 255, 255);">Serving In</h4>
+            <br>
+            <h5 style="font-size: 17.5px; font-weight: 600; color: rgb(255, 255, 255);">IND</h5>
+            <br>
+            <a href="https://www.urbancompany.com/agra">Agra</a>
+            <a href="https://www.urbancompany.com/ahmedabad">Ahemdabad</a>
+            <a href="https://www.urbancompany.com/alwar">Alwar</a>
+            <a href="https://www.urbancompany.com/amritsar">Amritsar</a>
+            <a href="https://www.urbancompany.com/aurangabad">Aurangabad</a>
+            <a href="https://www.urbancompany.com/bangalore">Bangalore</a>
+            <a href="https://www.urbancompany.com/bhopal">Bhopal</a>
+            <a href="https://www.urbancompany.com/bhubaneswar">Bhubaneshwar</a>
+            <a href="https://www.urbancompany.com/chandigarh">Chandigarh Tricity</a>
+            <a href="https://www.urbancompany.com/chennai">CHennai</a>
+            <a href="https://www.urbancompany.com/coimbatore">Coimbatore</a>
+            <a href="https://www.urbancompany.com/cuttack">Cuttack</a>
+            <a href="https://www.urbancompany.com/dehradun">Dehradun</a>
+            <a href="https://www.urbancompany.com/delhi-ncr">Delhi NCR</a>
+            <a href="https://www.urbancompany.com/guntur">Guntur</a>
+            <a href="https://www.urbancompany.com/guwahati">Guwahati</a>
+            <a href="https://www.urbancompany.com/gwalior">Gwalior</a>
+            <a href="https://www.urbancompany.com/hyderabad">Hyderabad</a>
+            <a href="https://www.urbancompany.com/indore">Indore</a>
+            <a href="https://www.urbancompany.com/jabalpur">Jabalpur</a>
+            <a href="https://www.urbancompany.com/jaipur">Jaipur</a>
+            <a href="https://www.urbancompany.com/jamshedpur">Jamshedpur</a>
+            <a href="https://www.urbancompany.com/jodhpur">Jodhpur</a>
+            <a href="https://www.urbancompany.com/kakinada">Kakinada</a>
+            <a href="https://www.urbancompany.com/kanpur">Kanpur</a>
+            <a href="https://www.urbancompany.com/karnal">Karnal</a>
+            <a href="https://www.urbancompany.com/kochi">Kochi</a>
+            <a href="https://www.urbancompany.com/kolkata">Kolkata</a>
+            <a href="https://www.urbancompany.com/kota">Kota</a>
+            <a href="https://www.urbancompany.com/lucknow">Lucknow</a>
+            <a href="https://www.urbancompany.com/ludhiana">Ludhiana</a>
+            <a href="https://www.urbancompany.com/madurai">Madurai</a>
+            <a href="https://www.urbancompany.com/meerut">Meerut</a>
+            <a href="https://www.urbancompany.com/mumbai">Mumbai</a>
+            <a href="https://www.urbancompany.com/mysore">Mysore</a>
+            <a href="https://www.urbancompany.com/nagpur">Nagpur</a>
+            <a href="https://www.urbancompany.com/nashik">Nashik</a>
+            <a href="https://www.urbancompany.com/panipat">Panipat</a>
+            <a href="https://www.urbancompany.com/patna">Patna</a>
+            <a href="https://www.urbancompany.com/prayagraj">Prayagraj</a>
+            <a href="https://www.urbancompany.com/pune">Pune</a>
+            <a href="https://www.urbancompany.com/raipur">Raipur</a>
+            <a href="https://www.urbancompany.com/rajahmundry">Rajahmundry</a>
+            <a href="https://www.urbancompany.com/ranchi">Ranchi</a>
+            <a href="https://www.urbancompany.com/rohtak">Rohtak</a>
+            <a href="https://www.urbancompany.com/sonipat">Sonipat</a>
+            <a href="https://www.urbancompany.com/surat">Surat</a>
+            <a href="https://www.urbancompany.com/thiruvananthapuram">Thiruvananthapuram</a>
+            <a href="https://www.urbancompany.com/udaipur">Udaipur</a>
+            <a href="https://www.urbancompany.com/vadodara">Vadodara</a>
+            <a href="https://www.urbancompany.com/varanasi">Varanasi</a>
+            <a href="https://www.urbancompany.com/vijayawada">Vijayawada</a>
+            <a href="https://www.urbancompany.com/visakhapatnam">Visakhapatnam</a>
+            <a href="https://www.urbancompany.com/warangal">Warangal</a>
+
+            <br>
+            <h5 style="margin-top: 20px; font-size: 17.5px; font-weight: 600; color: rgb(255, 255, 255);">UAE</h5>
+            <br>
+            <a href="https://www.urbancompany.com/abudhabi">Abu Dhabi</a>
+            <a href="https://www.urbancompany.com/dubai">Dubai</a>
+            <a href="https://www.urbancompany.com/sharjah">Sharjah</a>
+
+            <br>
+            <h5 style="margin-top: 20px; font-size: 17.5px; font-weight: 600; color: rgb(255, 255, 255);">AUS</h5>
+            <br>
+            <a href="https://www.urbancompany.com/melbourne">Melbourne</a>
+            <a href="https://www.urbancompany.com/sydney">Sydney</a>
+
+            <br>
+            <h5 style="margin-top: 20px; font-size: 17.5px; font-weight: 600; color: rgb(255, 255, 255);">SGP</h5>
+            <br>
+            <a href="https://www.urbancompany.com/singapore">Singapore</a>
+
+            <br>
+            <h5 style="margin-top: 20px; font-size: 17.5px; font-weight: 600; color: rgb(255, 255, 255);">USA</h5>
+            <br>
+            <a href="https://www.urbancompany.com/austin">Austin</a>
+
+            <br>
+            <h5 style="margin-top: 20px; font-size: 17.5px; font-weight: 600; color: rgb(255, 255, 255);">KSA</h5>
+            <br>
+            <a href="https://www.urbancompany.com/jeddah">Jeddah</a>
+            <a href="https://www.urbancompany.com/riyadh">Riyadh</a>
+        </div>
+
+        <hr style="width: 80%; margin: auto; margin-top: 20px;">
+
+        <div id="HP-banner-footer-3">
+            <a href="index.html">
+                <img style="width: 150px; height:50px" src="https://res.cloudinary.com/urbanclap/image/upload/images/growth/home-screen/1631097450980-d2de38.png" alt="">
+            </a>
+            <p style="font-size: 12px; font-weight: 400; color: rgb(255, 255, 255);">© 2014-22 UrbanClap Technologies India Pvt. Ltd.</p>
+            <div id="HP-banner-footer-3-a">
+                <a href="https://twitter.com/urbancompany_UC">
+                    <img style="width: 20px; height: 20px" src="image/HP-twitter-512.png" alt="">
+                </a>
+                <a href="https://www.facebook.com/UrbanCompany/">
+                    <img style="width: 20px; height: 20px" src="image/HP-facebook-3-512.png" alt="">
+                </a>
+                <a href="https://www.instagram.com/urbancompany/">
+                    <img style="width: 20px; height: 20px" src="image/HP-instagram-512.png" alt="">
+                </a>
+                <a href="https://www.youtube.com/channel/UCjNJe0jgLP257X9LsSuyIpg">
+                    <img style="width: 20px; height: 20px" src="image/HP-youtube-6-512.png" alt="">
+                </a>
+                <a href="https://www.linkedin.com/company/urbancompany/">
+                    <img style="width: 20px; height: 20px" src="image/HP-linkedin-6-512.png" alt="">
+                </a>
+                <a href="https://www.pinterest.com/UrbanCompanyOfficial/">
+                    <img style="width: 20px; height: 20px" src="image/HP-pinterest-512.png" alt="">
+                </a>
+            </div>
+            <div id="HP-banner-footer-3-a">
+                <a href="https://app.appsflyer.com/com.urbanclap.urbanclap?pid=MobileWeb&c=home_app_buttons">
+                    <img style="width: 145px; height:50px;" src="https://images.urbanclap.com/image/upload/categories/category_v2/category_7f907eb0.png" alt="">
+                </a>
+                <a href="https://app.appsflyer.com/id1032480595?pid=MobileWeb&c=home_app_buttons">
+                    <img style="width: 145px; height:50px;" src="https://images.urbanclap.com/image/upload/categories/category_v2/category_7f741d10.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="index.js"></script>

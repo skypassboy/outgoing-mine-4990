@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment summary</title>
+    <link rel="stylesheet" href="pay_summary.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <h3 id="main_heading">Summary</h3>
+  <hr>
+    <div id="main_container">
+     
+<div class="main_sub" id="main_sub1">
+             
+            <div class="rotating_coin">
+            
+                <div>
+                    <p>You are saving total <span>&#x20B9;</span>155 on this order!</p>
+                    <p>Including <span>&#x20B9;</span>68 with plus</p>
+                </div>
+                  <div>
+                      <img src="lp_img/vector_money.jpg" alt="">
+                      <img src="lp_img/rotate2.gif" alt="rotate">
+                     
+                 </div>
+           </div>
+              <hr>  
+            <div class="back-blue">  
+              <div class="re_add_remove" id="item_add">
+                
+              </div>
+              <div class="remove_membership">
+                  <div>
+                      <h3>Plus Membership</h3>
+                      <p id="months_near_btn">12 months</p>
+                  </div>
+                  <button id="remove_12months">Remove</button>
+                  <div>
+                      <p id="membership_duration">299</p>
+                      <!-- <p id="discount_membership">299</p> -->
+                  </div>
+              </div>
+            </div> 
+          </div> 
+                  
+        
+
+                
+                
+   
+        <div class="main_sub" id="main_sub2">
+     
+        <div class="payment_details">
+            <div id="payment_detail" class="pay_detail">
+              <h3>Payment Summary</h3>
+           
+            </div> 
+              <hr>
+              <div><h3>Total</h3><h3 id="sum_total"></h3></div>
+              <div class="final_discount">
+                <p><i class="fa fa-tag fa-lg"></i>Yay! you saved 155 on final bill</p>
+              </div>
+              <div class="bottom-line"></div>
+            </div>
+       
+             <div>
+              <div class="coupne_offer">
+                <div>&#37;</div>
+                <div>
+                   <p>Coupne and offers</p>
+                   <p>Login/Signup to view offers</p>
+                </div>
+            </div>
+               <div class="bottom-line"></div>
+            </div>  
+            <div id="slot_info_pay">
+
+            </div>    
+        </div>
+    </div><!--main_container end -->
+    <div class="fixed"></div>
+    <div id="modal_address" class="modal_class">
+      <div>
+        <div id="show_map">
+         
+          <div class="mapouter">
+            <div class="gmap_canvas">
+                <iframe width="600" 
+                   height="600" 
+                    id="gmap_canvas"
+                    frameborder="0"
+                    scrolling="no"
+                     marginheight="0" 
+                    marginwidth="0">
+                </iframe>
+       
+           
+            </div>
+        </div>
+        </div>
+        <div id="address_form">
+          <div>
+            <h3 id="location_map_head"></h3>
+            <p>New Delhi, 110044</p>
+          </div>
+          <input type="text" name="" id="address_input" placeholder="House/Flat Number">
+          <input type="text" name="" id="landmark_input" placeholder="Landmark">
+          <div class="add_type">
+            <p>Save as</p>
+            <div>
+              <button id="home_address">Home</button>
+              <button id="other_address">Other</button>
+            </div>
+          </div>
+          <div id="submit_address_div">
+            <button id="submit_address">Save and Proceed to slots</button>
+          </div>
+        </div>
+   
+      </div>
+    </div>
+    <!-- book slots-->
+    <div id="book_slots_div" class="book_slots_div">
+       <div id="childdiv_slots" class="">
+         <div id="append_address_u"></div>
+         <hr>
+         <div id="date_slots_div">
+            <h3>Select data of service</h3>
+            <p>Your service will take approx 50 mins</p>
+            <div id="data_slots">
+              <div><p>Sat</p><h3>28</h3></div>
+              <div><p>Sun</p><h3>29</h3></div>
+              <div><p>Mon</p><h3>30</h3></div>
+            </div>
+             <p>Free cancellation till 2 hrs before the boked slot, post that <span>&#x20B9;</span>50 chargeable</p>
+         </div>
+         <div id="slot_time_div">
+           <h2>Time to start the service</h2>
+           <div id="slot_time">
+             <p>10:30 AM</p>
+             <p>12:30 PM</p>
+             <p>2:30 PM</p>
+             <p>3:30 PM</p>
+             <p>4:30 PM</p>
+             <p>5:30 PM</p>
+         
+            </div>
+          </div>
+          <div id="proceed_checkout_div">
+            <button id="proceed_checkout">proceed checkout</button>
+          </div>
+        </div>
+             
+          
+    </div>
+      <!-- this multipurpose button -->
+      <div id="multipurpose_div">
+          <button id="multi_mode_verify">Login/Signup to Proceed</button>
+      </div>
+      <div id="bill_pay_div">
+        <button id="bill_pay">pay<p id="amount_finally"></p></button>
+      </div>
+        
+</body>
+</html>
+<script src="pay_summary.js"></script>

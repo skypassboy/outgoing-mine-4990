@@ -1,0 +1,326 @@
+
+        
+        #thdupenavbar{
+            /* display: flex;
+            justify-content: space-around; */
+            display: grid;
+            grid-template-columns:150px 900px 300px;
+            width: 100%;
+            height: 60px;
+            border: 1px solid white;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            align-items: center;
+
+        }
+        a{
+            font-size: 20px;
+            text-decoration: none;
+        }
+        #thleftsidenavbar{
+            display: flex;
+            justify-content: space-around;
+            /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+            /* border: 1px solid red; */
+        }
+        #thrightsidenavbar{
+            display: flex;
+            /* justify-content: space-around; */
+            /* border: 1px solid red; */
+            /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+
+        }
+        #thnavimg{
+            width: auto;
+            height: 50px;
+            /* margin:20px; */
+            /* margin-top: 10px; */
+            margin-left: 70px;
+            margin-bottom: 10px;
+            
+        }
+        
+        #thsidebar1{
+            display: grid;
+            grid-template-columns:40% 60%;
+            width: 100%;
+            height: 400px;
+            /* border: 1px solid red; */
+            gap: 10px;
+            margin-top: 10px;
+            /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+        }
+        #thleftsidebar1{
+            display: grid;
+            height: 400px;
+            grid-template-rows: repeat(3,1fr);
+            /* border: 1px solid green; */
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 15px;
+        }
+        #thrightsidebar2{
+            /* border: 1px solid green; */
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 15px;
+        }
+        #thleftsidebar1>div:nth-child(2){
+            /* border: 1px solid blue; */
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        #uc{
+            width: 80px;
+            background-color: white;
+            border: 1px solid black;
+            padding:10px 5px 10px 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #ratingimg{
+            width: 30px;
+        }
+        #thstar{
+            display: grid;
+            grid-template-columns:40px 40px;
+        }
+        #thsidebar2{
+            display: grid;
+            grid-template-columns:repeat(6,1fr);
+            gap: 10px;
+            width: 100%;
+            height: 200px;
+            /* border: 1px solid red; */
+            margin-top: 10px;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 10px;
+            position: sticky;
+            top: 0;
+            background-color: white;
+
+        }
+       
+       
+        .itemimg{
+            width: 300px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+            /* margin: auto; */
+        }
+        .content{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        #thbottomcontainer{
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: 70% 20%;
+            /* border: 0.5px solid black; */
+            margin-top: 10px;
+            gap: 10px;
+        }
+       
+        #thbottomcontainerrightside{
+            /* width: 500px; */
+            display: grid;
+            grid-template-rows:300px 200px;
+            gap: 20px;
+            height: 500px;
+            position: sticky;
+            /* z-index: 1; */
+            top: 35%;
+            /* border: 1px solid green; */
+            /* border: 0.5px solid black; */
+
+           
+        }
+       
+        #thbottomcontainerrightsidemain{
+            display: grid;
+            grid-template-rows: repeat(4,1fr);
+            gap: 20px;
+            height: 250px;
+        }
+       
+        #thsave{
+            display: grid;
+            grid-template-columns: 30px 300px;
+            /* border: 1px solid blue; */
+            /* margin: auto; */
+            cursor: pointer;
+            border-radius: 15px;
+
+        }
+        #thsave>div{
+            /* border: 1px solid blue; */
+            background-color: rgb(213, 241, 241);
+            border-radius: 5px ;
+            font-weight: bold;
+            /* margin: auto; */
+            border-radius: 15px;
+        } 
+         #thsavetop{
+            display: grid;
+            grid-template-rows: repeat(2,1fr);
+        
+            
+         
+        }
+        #thsavetop>div{
+            /* border: 1px solid yellow; */
+            height:auto;
+        }
+        #thsave1{
+            display: grid;
+            grid-template-columns: 30px 300px;
+            /* border: 1px solid blue; */
+            /* margin: auto; */
+            cursor: pointer;
+            border-radius: 15px;
+
+        }
+        #thsave1>div{
+            /* border: 1px solid blue; */
+            /* margin: auto; */
+            background-color: rgb(213, 241, 241);
+            border-radius: 5px ;
+            font-weight: bold;
+        } 
+         #thsavetop1{
+            display: grid;
+            grid-template-rows: repeat(2,1fr);
+            border-radius: 15px;
+        
+            
+         
+        }
+        #thsavetop1>div{
+            /* border: 1px solid yellow; */
+            height:auto;
+        }
+        #thsave2{
+            display: grid;
+            grid-template-columns: 30px 300px;
+            /* border: 1px solid blue; */
+            /* margin: auto; */
+            cursor: pointer;
+            border-radius: 15px;
+
+        }
+        #thsave2>div{
+            /* border: 1px solid blue; */
+            /* margin: auto; */
+            background-color: rgb(213, 241, 241);
+            border-radius: 5px ;
+            font-weight: bold;
+        } 
+         #thsavetop2{
+            display: grid;
+            grid-template-rows: repeat(2,1fr);
+        
+            
+         
+        }
+        #thsavetop2>div{
+            /* border: 1px solid yellow; */
+            height:auto;
+        }
+        #thsave3{
+            display: grid;
+            grid-template-columns: 30px 300px;
+            /* border: 1px solid blue; */
+            /* margin: auto; */
+            cursor: pointer;
+            border-radius: 15px;
+
+        }
+        #thsave3>div{
+            /* border: 1px solid blue; */
+            /* margin: auto; */
+            background-color: rgb(213, 241, 241);
+            border-radius: 5px ;
+            font-weight: bold;
+        } 
+         #thsavetop3{
+            display: grid;
+            grid-template-rows: repeat(2,1fr);
+        
+            
+         
+        }
+        #thsavetop3>div{
+            /* border: 1px solid yellow; */
+            height:auto;
+        }
+        #thbottomcontainerleftside{
+            display: grid;
+            grid-template-columns: 60% 40%;
+            grid-template-rows: auto;
+            /* border: 1px solid green;
+            border: 0.5px solid black; */
+        }
+        #thbottomcontainerleftside>div{
+            width: 100%;
+            height: auto;
+            /* border: 1px solid red; */
+        }
+        #thcostprice{
+            margin-bottom: 300px;
+        }
+        #thcostprice{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        
+        .liclass{
+            list-style: none;
+
+        }
+        .thsaveall{
+            border-radius: 1%;
+        }
+        .thbtn{
+            margin: 30% 30% 10% 40%;
+            padding: 10px 25px 10px 25px;
+            background-color: white;
+            color: blue;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border: 1px solid white;
+        }
+        .thbtn:hover{
+            background-color: blue;
+            color:white;
+            border: 1px solid blue;
+        }
+        .thviewcartbtnn{
+            margin-left: 40px;
+            margin-top: 30px;
+            padding: 10px 25px 10px 25px;
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 10px;
+            border: 1px solid blue;
+
+        }
+    
+                
+ #thsidebar2{
+    z-index: 100;
+   }              
+              
+        
+
+
+
+
+   
