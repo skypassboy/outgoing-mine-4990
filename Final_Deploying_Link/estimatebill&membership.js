@@ -44,7 +44,7 @@ let arr = []
 for (let i = 0; i < 2; i++) {
   arr.push(obj.user_review[i])
 }
-console.log(arr)
+
 let append = (arr) => {
   arr.forEach(({ name, member_since, image, price, description }) => {
 
@@ -94,38 +94,35 @@ append(arr)
 
 //experience multiply price
 
-let experience_price = document.querySelectorAll(".child2_P_div2>div")
+let experience_price = document.getElementById("yearly_discount")
 let count = []
-experience_price.forEach((el, i) => {
-  if (i == 4) {
-    el.classList.add("experience_multiply")
-  }
-  el.style.cursor = "pointer"
-  // el.classList.remove("experience_multiply")
+var btns = document.getElementsByClassName("btn")
 
-  el.addEventListener('click', () => {
+for(let i=0;i<btns.length;i++){ 
 
-    // console.log(el)
-    if (el.classList.contains("experience_multiply")) {
-      el.classList.remove("experience_multiply")
-      console.log("yes")
-    } else {
-      // console.log(el.innerText)
-      addingtoArray(el.innerText)
-
-      el.classList.add("experience_multiply")
-    }
-
+  btns[i].addEventListener("click", function(){
+    addingtoArray(btns[i].innerText)
+    let current = document.getElementsByClassName("experience_multiply")
+    current[0].className = current[0].className.replace(" experience_multiply", "")
+    this.className += " experience_multiply";
+    
   })
-})
-// console.log()
+}
+
+
+
+
+
+
+
+
 
 function addingtoArray(value) {
   let val = value
 
   // console.log(value)
   if (val !== undefined) {
-    console.log(val)
+    
     if (val == 2) {
       exp_price_accor.innerHTML = `<span>&#x20B9;</span>240`
     } else {

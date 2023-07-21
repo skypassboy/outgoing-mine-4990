@@ -556,7 +556,7 @@ localStorage.setItem("urbanCompany",JSON.stringify(passdata))
 }
 function view(){
     
-    window.location.href="estimatebill&membership.html"
+    window.location.href="estimatebill_membership.html"
 }
 
 package(main)

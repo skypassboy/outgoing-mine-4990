@@ -421,10 +421,20 @@ padding: 10px;
   background-color: rgba(241, 239, 235, 0.945);
 }
 /* adding active from javascript =========fixed div bottom page=======*/
-.experience_multiply{
-    background-color: rgb(232, 232, 238);
+
+/* Style the buttons */
+.btn {
+ 
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
 }
 
+/* Style the active class, and buttons on mouse-over */
+.experience_multiply, .btn:hover {
+  background-color: #666;
+  color: white;
+}
 #total_price{
   position: fixed;
   bottom: 0px;

@@ -16,7 +16,7 @@
             </div>
             <div id="HP-banner-Navbar-2">
                 <a href="../block_page/block_page.html" style="text-decoration: none;font-size: 17.5px; font-weight: 700;color: #fff;margin-right: 20px;">Blog</a>
-                <a href="https://partner.urbancompany.com/?utm_source=Customer_web&utm_campaign=header&utm_medium=homepage" style="font-size: 17.5px; font-weight: 700; color: #fff;margin-right: 20px; text-decoration: underline;">Register As A Professional</a>
+                <a href="javascript:void(0)" style="font-size: 17.5px; font-weight: 700; color: #fff;margin-right: 20px; text-decoration: underline;">Register As A Professional</a>
                 <span id="HP-Login-signUp"  style="text-decoration: none;font-size: 17.5px; font-weight: 700;color: #fff;margin-right: 20px; cursor: pointer;" onclick="HP_Login()">Login / Sign Up</span>
             </div>
         </div>
@@ -30,8 +30,12 @@
     </div>
 
     <div id="HP-mySidenav" class="HP-sidenav">
-        <a href="javascript:void(0)" class="HP-closebtn" onclick="HP_closeNav()">&times; <span style="font-size: 20px; top: 0;">Please Login to Continue</a>
-        <div style="width: 326px; height: 54px; margin-left: 30px; margin-top: 30px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;"><img src="https://res.cloudinary.com/urbanclap/image/upload/t_medium_res_template/images/supply/partner-app-supply/1661338258375-6c99b1.png" alt="" style="width: 20px; height: 15px; margin-left: 10px; padding-top: 5px;"><span>  +91</span><span>  &#9660</span><span><input type="Number" placeholder="You phone number" style="width: 232px; height:49px; right:0px; margin-left: 3px; border: 0.5px;"></span></div>
+        <a href="javascript:void(0)" class="HP-closebtn" onclick="HP_closeNav()">&times; <span style="font-size: 20px; top: 0;">Please Login to Continue</a>    
+        <div style="width: 326px; height: 54px; margin-left: 30px; margin-top: 30px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+            <img src="https://res.cloudinary.com/urbanclap/image/upload/t_medium_res_template/images/supply/partner-app-supply/1661338258375-6c99b1.png" alt="" style="width: 20px; height: 15px; margin-left: 10px; padding-top: 5px;">
+            <span>  +91</span><span>  &#9660</span><span><input id="phone_num" type="text" placeholder="You phone number" style="width: 232px; height:49px; right:0px; margin-left: 3px; border: 0.5px;"></span>
+        </div>
+        <div id="message"></div>
         <button id="HP-navbar-loginbutton" style="width: 326px; height: 54px; margin-left: 30px; margin-top: 30px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; color: white;cursor: pointer; border-radius: 5px; background-color: rgb(33, 33, 33); font-size: 16px;font-weight: 600;" onclick="HP_loginbuttons()">Continue</button>
       </div>
 
@@ -39,18 +43,18 @@
         <a href="mens.html">
             <div>
                 <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1609757635235-1a139e.png" alt="" style="width: 32px; height: 32px;">
-                <p class="HP-banner-foot-p">Salon for Women</p>
+                <p class="HP-banner-foot-p"><span style="color: green;text-align: center; vertical-align: middle;">&#176;</span>Salon for Women</p>
             </div>
         </a>
         
-        <a href="https://www.urbancompany.com/delhi-ncr-women-hair-services">
+        <a href="javscript:void(0)">
             <div>
                 <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/supply/customer-app-supply/1635331606894-7b633f.png" alt="" style="width: 32px; height: 32px;">
                 <p class="HP-banner-foot-p">Hair, Skin & Nails</p>
             </div>
         </a>
         
-        <a href="">
+        <a href="javascript:void(0)">
             <div>
                 <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_1312fb60.png" alt="" style="width: 32px; height: 32px;">
                 <p class="HP-banner-foot-p">Women's<br>Therapies</p>
@@ -60,14 +64,14 @@
         <a href="mens.html">
             <div>
                 <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1609757629780-2b2187.png" alt="" style="width: 32px; height: 32px;">
-                <p class="HP-banner-foot-p">Salon for Men</p>
+                <p class="HP-banner-foot-p"><span style="color: green;text-align: center; vertical-align: middle;">&#176;</span>Salon for Men</p>
             </div>
         </a>
         
-        <a href="https://www.urbancompany.com/delhi-ncr-massage-for-men">
+        <a href="mens.html">
             <div>
                 <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1609757731250-ba3308.png" alt="" style="width: 32px; height: 32px;">
-                <p class="HP-banner-foot-p">Men's Therapies</p>
+                <p class="HP-banner-foot-p"><span style="color: green;text-align: center; vertical-align: middle;">&#176;</span>Men's Therapies</p>
             </div>
         </a>
         
@@ -79,8 +83,7 @@
         <a href="electronics.html">
             <div>
                 <img src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_72d18950.png" alt="" style="width: 32px; height: 32px;">
-                <p class="HP-banner-foot-p">Electronics
-                </p>
+                <p class="HP-banner-foot-p"><span style="color: green;text-align: center; vertical-align: middle;">&#176;</span>Electronics</p>
             </div>
         </a>
         <a href="">

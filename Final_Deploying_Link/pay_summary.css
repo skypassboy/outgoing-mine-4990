@@ -74,9 +74,10 @@ body{
 .re_add_remove>div>#incre_decre_count{
     display: flex;
     padding: 0px 0px;
-    border: 0.1px solid #ad99e6;
+    border: 0.1px solid #5833c0;
     border-radius: 9px;
     background-color: #ebeef1;
+    
    /* font-family: 'PT Sans', sans-serif;
    font-family: 'Roboto', sans-serif; */
 }
@@ -86,20 +87,23 @@ body{
   padding: 0px 4px;
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
-  color: #9c82e4;
+  color: #5833c0;
+}
+.re_add_remove>div>#incre_decre_count>p:hover{
+    cursor: pointer;
 }
 .re_add_remove>div>p:last-child{
     text-align: right;
 } 
 .remove_membership>#remove_12months{
    padding: 9px 16px;
-   border: 0.1px solid #ad99e6;
+   border: 0.1px solid #5833c0;
    border-radius: 9px;
    background-color: #ebeef1;
    font-family: 'Roboto', sans-serif;
    font-size: 15px;
    font-weight: 600;
-   color: #9679e6;
+   color: #5833c0;
    letter-spacing: 0.18px;
    margin-left: auto;
    margin-right: 7%;
@@ -490,3 +494,20 @@ body{
 #main_heading{
     margin-left: 5%;
 }
+
+/* show redirecting message............. */
+
+#show_message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    padding: 10px;
+    background-color: #c8ebeb;
+    display: none;
+    z-index: 1220;
+}
+

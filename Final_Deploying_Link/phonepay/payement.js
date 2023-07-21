@@ -11,9 +11,10 @@ document.getElementById('payment').append(h3)
 transfer.addEventListener('click', ()=>{
     let pay = document.getElementById('pay_amount').value
     
-
+    
     let res = new Promise((resolve, reject)=>{
-         if(pay){
+        
+         if(pay==x){
         let payment_status_img = document.createElement('img')
         payment_status_img.src = "loading_img.gif"
         payment_status_img.setAttribute('id', "processing") 
@@ -56,19 +57,57 @@ transfer.addEventListener('click', ()=>{
         process.style.display="block"
         
         document.getElementById('payment').innerHTML =null
+    
+        localStorage.setItem('urban_company_users', JSON.stringify([]))
+     
+        let show_Redirecting_message = document.getElementById('show_Redirecting_message')
+        let success_msg =  document.createElement('h4')
+        let count = 0
+       let id = setInterval(()=>{
+        count++
+           success_msg.innerText = `Redirecting....to Home...${count}`
+           show_Redirecting_message.append(success_msg)
+           success_msg.style.textAlign='center'
+           success_msg.style.color="green"
+           if(count===5){
+            clearInterval(id)
+            window.location.href = '../index.html'
+           }
+       }, 1000)
+        
     }).catch((err)=>{
         console.log(err)
-        console.log("hello")
-      
-        let msg = document.createElement('h4')
-        msg.innerHTML ='<h2 id=cancel_payment><span>!<span>Unable to Complete Your Payment</h2>'
-        let process = document.querySelector('#payment_status_current')
-        process.append(msg)
-        process.style.display="block"
+        alert('Enter Amount or Empty value')
+        let count = 0
+        let text = 'error'
+        showMessagePayment(text, count)
+       
     })
 
 
 })
+
+function showMessagePayment(checkText, count){
+    let process = document.getElementById('payment_status_current')
+        let id =  setInterval(()=>{
+            count++
+         process.innerHTML = null
+        let success = `<h2>Payment Successful... Redirecting to Home ${count}</h2>`
+        let msg = document.createElement('h4')
+        checkText=="error"?msg.innerHTML =`<h2 id=cancel_payment><span>!<span>Unable to Complete Your Payment... Redirecting to paymentSummary page..<span>${ count}</span></h2>`:success
+        msg.setAttribute('id', "message_payment_fail")
+        process.append(msg)
+        if(count===5){
+            clearInterval(id)
+            window.location.href = '../estimatebill_membership.html'
+        }
+       }, 1000)
+           
+        
+       
+       
+        process.style.display="block"
+}
 //input
 //
 

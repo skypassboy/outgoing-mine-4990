@@ -196,6 +196,10 @@ option{
    margin: auto;
 }
 .HP-sidenav{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:20px;
     height: 100%;
     width: 0;
     background-color: white;
@@ -234,13 +238,14 @@ option{
     margin-top: 30px;
     font-size: 16px;
     color: gray;
-    margin-left: 30px;
+ 
     border-radius: 5px 0px 0px 5px;
     border: 0px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .HP-otp-btn{
-    width: 100px;
+    display: block;
+    width: 226px;
     height: 56px;
     background-color: black;
     color: white;

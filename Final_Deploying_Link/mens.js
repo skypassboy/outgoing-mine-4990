@@ -429,7 +429,7 @@ c:"Hair cut for mens"
         thviewcart.append(btnn)
         
         btnn.addEventListener('click', ()=>{
-            window.location.href = "estimatebill&membership.html"
+            window.location.href = "estimatebill_membership.html"
         })
 
          

@@ -130,35 +130,148 @@ function getLocation()
     
 //  }
 //}
+let login_user =  JSON.parse(localStorage.getItem("urban_company_login")) || {}
+// let urban_users_mobile = JSON.parse(localStorage.getItem('urban_company_users')) || []
 
 function HP_Login() {
   if(document.getElementById('HP-Login-signUp').innerText=="Logout"){
+    localStorage.setItem('urbanCompany', JSON.stringify([]))
+
+    localStorage.setItem('urban_company_login', JSON.stringify({}))
     document.getElementById('HP-Login-signUp').textContent="Login / SignUp"
+    window.location.reload()
+  }else{
+     
   }
     document.getElementById("HP-mySidenav").style.width = "25%";
-}
+  }
 
+
+
+
+let check_otp = ""
 function HP_closeNav() {
     document.getElementById("HP-mySidenav").style.width = "0";
 }
 
 function HP_loginbuttons(){
     document.getElementById("HP-mySidenav").style.width = "25%";
+     
+    let check_login_input = document.getElementById('phone_num')
+    let val = check_login_input.value
+  
+  
+    let show_message = document.getElementById('message')
+    if(val.length>10 || val.length<10){
+      show_message.innerHTML = null
+      let message = document.createElement('p')
+      message.innerText = 'Please Enter Valid Number'
+      show_message.append(message)
+    }else{
+      show_message.innerHTML = null
+      // console.log(val)
+      let urban_users_mobile = JSON.parse(localStorage.getItem('urban_company_users')) || []
+      
+      console.log(urban_users_mobile)
+      let check_userExist =  urban_users_mobile?.filter(el=>el.user_mobile==val)  
+      if(check_userExist.length>0){
+            alert('already Exist')
+            
+      }else{
+        urban_users_mobile.push({user_mobile:val})
+        localStorage.setItem('urban_company_users', JSON.stringify(urban_users_mobile))
+      }
+      console.log(check_userExist)
+      let check_otp_input_exist = document.getElementById('login_otp')
+      if(check_otp_input_exist){
+       
+       
+      }else{
+        let contine_btn = document.getElementById('HP-navbar-loginbutton')
+        contine_btn.disabled = true;
+        let genrate_otp = document.createElement('p')
+        check_otp  = generateOTP()
+        genrate_otp.innerText = `Your OTP is ${check_otp}`
+        genrate_otp.style.textAlign = 'center'
+        show_message.append(genrate_otp)
+        let otp=document.createElement("input")
+        otp.setAttribute("class","HP-otp")
+        otp.setAttribute('id', "login_otp")
+        otp.setAttribute("placeholder", "   Enter OTP here")
+       
+        let btn=document.createElement("button")
+        btn.setAttribute("class","HP-otp-btn")
+        btn.innerText="LOGIN"
+        btn.addEventListener("click", function(){
+          myfunc()
+    
+        })
+        document.querySelector("#HP-mySidenav").append(otp,btn)
+      }
+     
+    }
+     
+  }
+   
 
-    let x=document.createElement("input")
-    x.setAttribute("class","HP-otp")
-    x.setAttribute("placeholder", "   Enter OTP here")
-
-    let btn=document.createElement("button")
-    btn.setAttribute("class","HP-otp-btn")
-    btn.innerText="LOGIN"
-    btn.addEventListener("click", function(){
-      myfunc()
-    })
-    document.querySelector("#HP-mySidenav").append(x,btn)
+  function generateOTP() {
+          
+    // Declare a digits variable 
+    // which stores all digits
+    var digits = '0123456789';
+    let OTP = '';
+    for (let i = 0; i < 4; i++ ) {
+        OTP += digits[Math.floor(Math.random() * 10)];
+    }
+    return OTP;
 }
+
+   
 function myfunc(){
-  let y=document.getElementById('HP-Login-signUp')
-  y.textContent="Logout"
-  document.getElementById("HP-mySidenav").style.width = "0";
+  let login_otp = document.getElementById('login_otp')
+  let check_login_input = document.getElementById('phone_num').value
+  let final_check_user = JSON.parse(localStorage.getItem('urban_company_users')) || []
+  let check_userExist =  final_check_user?.filter(el=>el.user_mobile==check_login_input)  
+  let show_message = document.getElementById('message')
+
+  if(login_otp.value==check_otp && check_userExist.length>0){
+    let check_otp_input_exist = document.getElementById('login_otp')
+    let check_login_input = document.getElementById('phone_num')
+    check_otp_input_exist.value = " "
+    check_login_input.value = " "  
+    localStorage.setItem('urban_company_login', JSON.stringify({login:true, user:check_userExist[0].user_mobile}))
+    let login_check=document.getElementById('HP-Login-signUp')
+    let check_login = JSON.parse(localStorage.getItem('urban_company_login'))
+    if(check_login.login){
+        login_check.textContent="Logout"
+    }else{
+         
+    }
+    
+    document.getElementById("HP-mySidenav").style.width = "0";
+  }else{
+      
+    
+    let delete_message = document.getElementById('otp_wrong')
+    if(delete_message){
+      delete_message.remove()
+    }
+    let message = document.createElement('p')
+    message.setAttribute('id', "otp_wrong")
+    message.style.textAlign = 'center'
+    message.textContent = "Wrong OTP.."
+    // show_message.appendChild(message)
+    show_message.insertAdjacentElement("beforeend", message);
+  }
+  
+   
+
+}
+
+let login_check=document.getElementById('HP-Login-signUp')
+let check_login = JSON.parse(localStorage.getItem('urban_company_login'))
+if(check_login.login){
+    login_check.textContent="Logout"
+}else{
+    
 }
