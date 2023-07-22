@@ -299,6 +299,8 @@ function multiMode(){
    multi.addEventListener('click', ()=>{
       multi.style.backgroundColor ="#cac6d4"
     if(multi.innerText=="Proceed To Checkout"){
+  
+        localStorage.setItem('slots', JSON.stringify({}))
         if(login){
             setTimeout(()=>{
                  
@@ -343,7 +345,7 @@ function multiMode(){
 }
 //function to show message
 function showMessage(){
-
+   
 }            
 
 //  getting address from local storage the item
@@ -368,67 +370,114 @@ let appendUserData = ()=>{
 
 appendUserData()
 getSlots()
-function getSlots(){
-    let slot = []
-    let slot_time =  document.querySelectorAll('#slot_time>p')
+
+let initial_object = {
+    date:"",
+    weekday:"",
+    time:""
+
+}
+function getAllSlots(val){
+  
+    initial_object = {...initial_object, time:val}
     
-    for(let i=0;i<slot_time.length;i++)
-    {
-        slot_time[i].addEventListener('click', ()=>{
-           slot.push(slot_time[i].innerText)
-           
-        })
-    }
-let data_slots =  document.getElementById('data_slots') 
-data_slots.addEventListener('click', ()=>{
+}
+
+  
+
+function getSlots(){
     let data_slot_p =  document.querySelectorAll('#data_slots>div>p')   
     let data_slot_h3 =  document.querySelectorAll('#data_slots>div>h3')   
     for(let i=0;i<data_slot_p.length;i++)
     {
+        data_slot_h3[i].addEventListener('click', function(){
+            let week_date = document.getElementsByClassName('week_d')
+            week_date[0].className = week_date[0].className.replace(" week_d", "")
+            // data_slot_h3[i].style.backgroundColor="blue" 
+            this.className  += " week_d"
+            let s_date = data_slot_h3[i].innerText
+            let s_weekday = data_slot_p[i].innerText
+      
+      
+        initial_object = {...initial_object, date:s_date, weekday:s_weekday}
+           
+          
+        })
         
+    }
+
+
+
+
+
+
+
+//select date.......
+
+let slot_time =  document.querySelectorAll('#slot_time>p')
+// console.log(slot_time[0].innerText)
+for(let i=0;i<slot_time.length;i++)
+{
+    slot_time[i].addEventListener('click', function(){
+        console.log(slot_time[i])
+        let slot_t = document.getElementsByClassName('slot_t')
+        slot_t[0].className = slot_t[0].className.replace(" slot_t", "")
+        this.className  += " slot_t"
+       let preslot = slot_time[i].innerText
+        getAllSlots(preslot)
+    })
+}
+
+  //select time slot.....
+    
+ 
+
+let proceed_checkout =  document.getElementById('proceed_checkout')    
+
+proceed_checkout.addEventListener('click', ()=>{
+    let {date, weekday, time} = initial_object
+    if(date==="" || weekday==="" || time===""){
+         alert('please Select slots')
+    }else{
+        localStorage.setItem('slots', JSON.stringify(initial_object))
+        let book_slots_div =  document.getElementById('book_slots_div')    
+          
+         appendSlotAndTime()  
+         book_slots_div.parentNode.removeChild(book_slots_div)
+         
+         let bill_pay_div =  document.getElementById('bill_pay_div')
+         bill_pay_div.style.display="block"
+         let finalBill = JSON.parse(localStorage.getItem("finalBill"))
+        //  finalBill
+        let amount_finally =  document.getElementById('amount_finally')
+        amount_finally.innerHTML = `<span>&#x20B9;</span>${finalBill}`
+        amount_finally.addEventListener('click', ()=>{
+            localStorage.setItem("final_bill_urban", JSON.stringify(finalBill))
+             window.location.href ="phonepay/payment.html"
+        })
+    }
+ 
+   
+})
+
+}
+
+    
+   
+
        
             
            
         
-        data_slot_h3[i].addEventListener('click', ()=>{
-            
-            // data_slot_h3[i].style.backgroundColor="blue" 
-            let s_date = data_slot_h3[i].innerText
-            let s_weekday = data_slot_p[i].innerText
-            slot.push(s_date, s_weekday)
-          
- 
-            localStorage.setItem("slots", JSON.stringify(slot))
-        })
-    }
-})
-let proceed_checkout =  document.getElementById('proceed_checkout')    
 
-proceed_checkout.addEventListener('click', ()=>{
-    
-    let book_slots_div =  document.getElementById('book_slots_div')    
-      
-     appendSlotAndTime()  
-     book_slots_div.parentNode.removeChild(book_slots_div)
-     
-     let bill_pay_div =  document.getElementById('bill_pay_div')
-     bill_pay_div.style.display="block"
-     let finalBill = JSON.parse(localStorage.getItem("finalBill"))
-    //  finalBill
-    let amount_finally =  document.getElementById('amount_finally')
-    amount_finally.innerHTML = `<span>&#x20B9;</span>${finalBill}`
-    amount_finally.addEventListener('click', ()=>{
-        localStorage.setItem("final_bill_urban", JSON.stringify(finalBill))
-         window.location.href ="phonepay/payment.html"
-    })
-    
-    // window.location.href=""
-})
+//function to select slots.......
 
-}
+
+
+
 function appendSlotAndTime(){
    let time_date= JSON.parse(localStorage.getItem("slots"))
-   console.log(time_date[0])
+   console.log(time_date)
    let div = document.createElement('div')
    let p1 = document.createElement('p')
    let p2 = document.createElement('p')
@@ -436,9 +485,9 @@ function appendSlotAndTime(){
    let p4 = document.createElement('p')
 
    p1.innerText = "Booked Slot:"
-   p2.innerText =  time_date[0]
-   p3.innerText =  `Aug${time_date[1]}`
-   p4.innerText =  `Weekday ${time_date[2]}`
+   p2.innerText =  time_date.time
+   p3.innerText =  `Aug${time_date.date}`
+   p4.innerText =  `Weekday ${time_date.weekday}`
 div.append(p1, p2, p3, p4)
 document.getElementById('slot_info_pay').append(div)    
 
@@ -446,4 +495,6 @@ document.getElementById('slot_info_pay').append(div)
    
    
 
-   
+
+
+

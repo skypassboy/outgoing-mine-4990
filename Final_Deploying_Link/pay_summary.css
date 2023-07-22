@@ -395,7 +395,7 @@ body{
     overflow-y:scroll ;
     max-height: 300px;
 }
-#slot_time>p{
+#slot_time>.slot{
     margin: 12px 20px;
     padding: 10px 12px;
     background-color: rgb(230, 230, 230);
@@ -405,8 +405,9 @@ body{
     font-size: 18px;
     cursor: pointer;
 }   
-#slot_time>p:hover{
-    background-color: #cccfcf;
+
+#slot_time>.slot_t, #slot_time>.slot:hover{
+    background-color: #9a9f9f;
 }
 #proceed_checkout_div{
     display: flex;
@@ -511,3 +512,11 @@ body{
     z-index: 1220;
 }
 
+/* week date */
+#date_slots_div>#data_slots>div>.week_date{
+    background-color: #d6e0e0;
+   
+}
+#date_slots_div>#data_slots>div>.week_d, #date_slots_div>#data_slots>div>.week_date:hover{
+    background-color: #8e9292;
+}
